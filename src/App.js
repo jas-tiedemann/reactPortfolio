@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { 
+  AppBar,
+  Typography,
+  Toolbar,
+  Box
+} from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
+import ProjectList from './components/ProjectList';
+import Error from './components/Error';
+import About from './components/About';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box>
+      <BrowserRouter>
+        <AppBar position="sticky" sx={{
+            flexDirection: "row-reverse",
+            backgroundColor: "#383838",
+            padding: "0 180px"
+        }}>
+            <Toolbar>
+                <RouterLink to="/" style={{ textDecoration: "none" }}>
+                    <Typography variant="h4" sx={{color: "white", margin: "0 2rem"}}>Work</Typography>
+                </RouterLink>
+                <RouterLink to="/about" style={{ textDecoration: "none" }}>
+                    <Typography variant="h4" sx={{color: "white", margin: "0 2rem"}}>About</Typography>
+                </RouterLink>
+            </Toolbar>
+        </AppBar>
+      
+        <Routes>
+          <Route path="/" element={<ProjectList />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </BrowserRouter>
+    </Box>
   );
 }
-
 export default App;
