@@ -14,15 +14,24 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import Image from "./images/lighttower-img.jpg";
 
+
+//green: #0d1517, red: #dd0910
 const App = () => {
   return (
-    <Box>
+    <Box sx={{
+      backgroundImage: `url(${Image})`,
+      backgroundSize: "cover",
+      minHeight: "1000px"
+      
+    }}>
       <BrowserRouter>
         <AppBar position="sticky" sx={{
             flexDirection: "row-reverse",
-            backgroundColor: "#383838",
-            padding: "0 180px"
+            backgroundColor: "#0b161a",
+            padding: "0 180px",
+            opacity: "0.8"
         }}>
             <Toolbar>
                 <RouterLink to="/" style={{ textDecoration: "none" }}>
