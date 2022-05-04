@@ -7,12 +7,15 @@ import AsciiImage from "../images/ascii-tree-img.PNG";
 
 const ProjectList = () => {
     return (
-        <Grid container columnSpacing={{ xs: 12 }} rowSpacing={{ xs: 0 }} sx={{alignItems: "center", justifyContent: "center", minHeight: "65rem"}}>
+        <Grid container columnSpacing={{ xs: 12 }} sx={{
+            alignItems: "center",
+            justifyContent: "center",
+            minHeight: "60rem",
+            marginBottom: "8rem"
+            }}>
             <Grid item xs={12} align="center">
-                <Typography variant="h1" sx={{
-                    padding: "1rem"
-                }}>
-                    Projects and <br></br>Achievements
+                <Typography variant="h1">
+                    Projects
                 </Typography>
             </Grid>
             <Grid item xs={4} align="center">

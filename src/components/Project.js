@@ -11,15 +11,21 @@ const Project = ( { projName, ImgSrc, link } ) => {
         }}>
             <Box sx={{
                 borderRadius: 2,
+                borderStyle: "solid",
+                borderWidth: "3px",
+                borderColor: "white",
                 boxShadow: 7,
                 backgroundImage: `url(${ImgSrc})`,
                 backgroundSize: "30rem",
                 width: "30rem",
                 height: "23rem"
             }}>
-                <Typography variant="h5" sx={{
-                    color: "#A0A0A0",
-                    bgcolor: "transparent"
+                <Typography variant="h5" className="nameOfProj" sx={{
+                    color: "black",
+                    bgcolor: "white",
+                    width: "fit-content",
+                    borderRadius: "0% 0% 5px 5px",
+                    padding: "0.3rem"
                 }}>
                     {projName}
                 </Typography>
