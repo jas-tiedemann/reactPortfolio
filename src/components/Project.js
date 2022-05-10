@@ -7,9 +7,17 @@ const Project = ( { projName, ImgSrc, link } ) => {
         <MuiLink href={link} target="_blank" sx={{
             textDecoration: "none",
             margin: "6rem",
-            rel: "noopener"
+            rel: "noopener",
+            ":hover": {
+                "& .nameOfProj": {
+                    color: "#dd0910"
+                },
+                "& .linkBox": {
+                    boxShadow: 20
+                }
+            }
         }}>
-            <Box sx={{
+            <Box className="linkBox" sx={{
                 borderRadius: 2,
                 borderStyle: "solid",
                 borderWidth: "3px",
@@ -24,7 +32,7 @@ const Project = ( { projName, ImgSrc, link } ) => {
                     color: "black",
                     bgcolor: "white",
                     width: "fit-content",
-                    borderRadius: "0% 0% 5px 5px",
+                    borderRadius: "0 0 5px 5px",
                     padding: "0.3rem"
                 }}>
                     {projName}
