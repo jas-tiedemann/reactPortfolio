@@ -1,20 +1,31 @@
 import React from "react";
-import { Typography, Container } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 
 const About = () => {
     return (
-        <Container maxWidth="false" sx={{
+        <Box sx={{
             bgcolor: "white",
-            height: "35rem"
+            display: "flex",
+            justifyContent: "center",
+            flexDirection: "column"
             }}>
-            <Typography variant="h1" align="center" sx={{
-                paddingTop: "5rem"
+            <Box sx={{
+                padding: "1rem",
+                display: "flex",
+                justifyContent: "center"
             }}>
-                About Me
-            </Typography>
-            <Container maxWidth="false" sx={{
-                padding: "6rem",
-                width: "45rem"
+                <Typography variant="h1" sx={{
+                    paddingTop: "5rem"
+                }}>
+                    About Me
+                </Typography>
+            </Box>
+            <Box sx={{
+                padding: "4rem",
+                maxWidth: "40rem",
+                display: "flex",
+                justifyContent: "center",
+                margin: "auto"
             }}>
                 <Typography variant="p" sx={{
                     fontSize: "2rem"
@@ -29,8 +40,8 @@ const About = () => {
                     <br></br>
                     Hobbies: My favorite things to do in my free time are running, working out, cooking and playing video games.
                 </Typography>
-            </Container>
-        </Container>
+            </Box>
+        </Box>
         )
 }
 

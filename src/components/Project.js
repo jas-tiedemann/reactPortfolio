@@ -24,9 +24,12 @@ const Project = ( { projName, ImgSrc, link } ) => {
                 borderColor: "white",
                 boxShadow: 7,
                 backgroundImage: `url(${ImgSrc})`,
-                backgroundSize: "30rem",
-                width: "30rem",
-                height: "23rem"
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                bgcolor: "white",
+                height: "20rem",
+                width: "26rem"
             }}>
                 <Typography variant="h5" className="nameOfProj" sx={{
                     color: "black",

@@ -7,21 +7,25 @@ import AsciiImage from "../images/ascii-tree-img.PNG";
 
 const ProjectList = () => {
     return (
-        <Grid container columnSpacing={{ xs: 12 }} sx={{
-            alignItems: "center",
-            justifyContent: "center",
-            minHeight: "60rem",
+        <Grid container xs={12} spacing={6} item={true} justifyContent="center" align="center" sx={{
+            justifyContent: "flex-start",
             marginBottom: "8rem"
             }}>
-            <Grid item xs={12} align="center">
-                <Typography variant="h1">
+            <Grid item xs={12}>
+                <Typography variant="h1" sx={{
+                    fontSize: {xs: "4rem", md: "6rem"},
+                    marginTop: "10rem"
+                }}>
                     Projects
                 </Typography>
             </Grid>
-            <Grid item xs={4} align="center">
+            <Grid item lg={6} align="center">
                 <Project projName={"Hangman"} ImgSrc={HangmanImage} link={"http://localhost:8000/"} />
             </Grid>
-            <Grid item xs={4} align="center">
+            <Grid item lg={6} align="center">
+                <Project projName={"ASCII-Tree"} ImgSrc={AsciiImage} />
+            </Grid>
+            <Grid item lg={6} align="center">
                 <Project projName={"ASCII-Tree"} ImgSrc={AsciiImage} />
             </Grid>
         </Grid>
