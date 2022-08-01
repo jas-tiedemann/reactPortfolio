@@ -1,15 +1,12 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { 
-  AppBar,
-  Typography,
-  Toolbar,
-  Box,
-  ButtonBase
+import {
+  Box
 } from "@mui/material";
 import About from './components/About';
 import ProjectList from './components/ProjectList';
 import Resume from './components/Resume';
+import Navbar from './components/Navbar';
 import ImageBig from "./images/lighttower-img.png";
 import ImageSmall from "./images/lighttower-small-img.png";
 
@@ -89,85 +86,39 @@ const App = () => {
       backgroundRepeat: "no-repeat",
       height: "100%"
       
-    }}>
-      <AppBar position="sticky" sx={{
-          flexDirection: "row-reverse",
-          backgroundColor: "black",
-          padding: "0 2rem",
-          height: "5rem"
+  }}>
+      <Box id="wrapperNav" sx={{
+        display: "flex",
+        justifyContent: "center",
+        width: "device-width",
+        margin: 0,
+        padding: 0,
+        position: "sticky",
+        top: 0
       }}>
-        <Toolbar>
-            <ButtonBase id="btnWork" variant="text" sx={{
-              textDecoration: "none",
-              display: "inline-block",
-              textTransform: "none",
-              backgroundColor: "transparent",
-              margin: {xl: "2rem"},
-              width: {md: "7rem"} }}>
-              <Typography variant="h4" sx={{
-                color: "white",
-                fontSize: {xs: "1.75rem", sm: "2rem", xl: "2.5rem"},
-                '&:hover': {
-                  color: "#fb020a"
-                  }}}>
-                    Work
-              </Typography>
-            </ButtonBase>
-            <ButtonBase id="btnAbout" variant="text" sx={{
-              textDecoration: "none",
-              display: "inline-block",
-              textTransform: "none",
-              backgroundColor: "transparent",
-              margin: {xl: "2rem"},
-              width: {md: "7rem"} }}>
-              <Typography variant="h4" sx={{
-                    color: "white",
-                    fontSize: {xs: "1.75rem", sm: "2rem", xl: "2.5rem"},
-                    '&:hover': {
-                      color: "#fb020a"
-                      }}}>
-                        About
-              </Typography>
-            </ButtonBase>
-            <ButtonBase id="btnResume" variant="text" sx={{
-              textDecoration: "none",
-              display: "inline-block",
-              textTransform: "none",
-              backgroundColor: "transparent",
-              margin: {xl: "2rem"},
-              width: {md: "7rem"} }}>
-              <Typography variant="h4" sx={{
-                    color: "white",
-                    fontSize: {xs: "1.75rem", sm: "2rem", xl: "2.5rem"},
-                    '&:hover': {
-                      color: "#fb020a"
-                      }}}>
-                        Resume
-              </Typography>
-            </ButtonBase>
-        </Toolbar>
-      </AppBar>
+        <Navbar />
+      </Box>
 
-        <Box id="wrapperProj" sx={{
-          display: "flex",
-          justifyContent: "center",
-          width: "device-width",
-          margin: 0,
-          padding: 0
-        }}>
-          <ProjectList />
-        </Box>
+      <Box id="wrapperProj" sx={{
+        display: "flex",
+        justifyContent: "center",
+        width: "device-width",
+        margin: 0,
+        padding: 0
+      }}>
+        <ProjectList />
+      </Box>
 
-        <Box id="wrapperAbout"> 
-          <About />
-        </Box>
+      <Box id="wrapperAbout"> 
+        <About />
+      </Box>
 
-        <Box id="wrapperResume" sx={{
-          display: "flex",
-          justifyContent: "center"
-        }}> 
-          <Resume />
-        </Box>
+      <Box id="wrapperResume" sx={{
+        display: "flex",
+        justifyContent: "center"
+      }}> 
+        <Resume />
+      </Box>
     </Box>
   );
 }

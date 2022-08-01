@@ -25,9 +25,6 @@ const ProjectList = () => {
             <Grid item lg={6} align="center">
                 <Project projName={"ASCII-Tree"} ImgSrc={AsciiImage} />
             </Grid>
-            <Grid item lg={6} align="center">
-                <Project projName={"ASCII-Tree"} ImgSrc={AsciiImage} />
-            </Grid>
         </Grid>
     );
 }
