@@ -6,7 +6,7 @@ import {
 import About from './components/About';
 import ProjectList from './components/ProjectList';
 import Resume from './components/Resume';
-import Navbar from './components/Navbar';
+import NavDesktop from './components/NavDesktop';
 import ImageBig from "./images/lighttower-img.png";
 import ImageSmall from "./images/lighttower-small-img.png";
 
@@ -85,7 +85,6 @@ const App = () => {
       backgroundPosition: {xs: "50% 75%", md: "top"},
       backgroundRepeat: "no-repeat",
       height: "100%"
-      
   }}>
       <Box id="wrapperNav" sx={{
         display: "flex",
@@ -96,7 +95,7 @@ const App = () => {
         position: "sticky",
         top: 0
       }}>
-        <Navbar />
+        <NavDesktop />
       </Box>
 
       <Box id="wrapperProj" sx={{

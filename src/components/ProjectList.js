@@ -7,7 +7,7 @@ import AsciiImage from "../images/ascii-tree-img.PNG";
 
 const ProjectList = () => {
     return (
-        <Grid container xs={12} spacing={6} item={true} justifyContent="center" align="center" sx={{
+        <Grid container xs={12} spacing={6} item={true} align="center" sx={{
             justifyContent: "flex-start",
             marginBottom: "8rem"
             }}>
