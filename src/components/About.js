@@ -7,7 +7,8 @@ const About = () => {
             bgcolor: "white",
             display: "flex",
             justifyContent: "center",
-            flexDirection: "column"
+            flexDirection: "column",
+            minHeight: "70rem"
             }}>
             <Box sx={{
                 padding: "1rem",

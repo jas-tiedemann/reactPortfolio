@@ -81,9 +81,6 @@ const App = () => {
   }, []);
 
 
-  
-
-
   return (
     <Box sx={{
       backgroundImage: {xs: `url(${ImageSmall})`, md: `url(${ImageBig})`},

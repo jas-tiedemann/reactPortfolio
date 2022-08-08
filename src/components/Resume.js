@@ -10,7 +10,8 @@ const Resume = () => {
             backgroundSize: {xs: "cover", md: "cover"},
             backgroundPosition: {xs: "50% 75%", md: "top"},
             backgroundRepeat: "no-repeat",
-            height: "100%"
+            height: "100%",
+            minHeight: "70rem"
             }}>
             <Box>
                 <Box sx={{

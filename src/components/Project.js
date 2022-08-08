@@ -28,8 +28,9 @@ const Project = ( { projName, ImgSrc, link } ) => {
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
                 bgcolor: "white",
-                height: "20rem",
-                width: "26rem"
+                height: {xs: "20rem", md: "23rem", xl: "25rem"},
+                width: {xs: "26rem", md: "30rem", xl: "32.5rem"},
+                margin: "2rem"
             }}>
                 <Typography variant="h5" className="nameOfProj" sx={{
                     color: "black",
