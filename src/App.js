@@ -7,29 +7,34 @@ import About from './components/About';
 import ProjectList from './components/ProjectList';
 import Resume from './components/Resume';
 import NavDesktop from './components/NavDesktop';
+import NavMobile from './components/NavMobile';
 import ImageBig from "./images/lighttower-img.png";
 import ImageSmall from "./images/lighttower-small-img.png";
 
 
 
 const App = () => {
-  const [state, setState] = useState ({
-    mobileView: false
-  });
+  const [mobileView, setMobileView] = useState(false);
 
-  const { mobileView } = state;
+  const displayMobile = () => {
+    return (
+      <NavMobile />
+    );
+  }
 
+  const displayDesktop = () => {
+    return (
+      <NavDesktop />
+    );
+  }
+
+  
   useEffect(() => {
-    const setResponsiveness = () => {
-      return 
-        if (window.innerWidth < 900) {
-          setState((prevState) => ({...prevState, mobileView: true }));
-          console.log("below 900")
-        } else {
-          setState((prevState) => ({...prevState, mobileView: false }));
-          console.log("above 900")
-        }}
-
+    const setResponsiveness = (e) => {
+        window.innerWidth < 900 ?
+          setMobileView(true) : 
+          setMobileView(false)
+        }
         setResponsiveness();
         window.addEventListener("resize", () => setResponsiveness());
 
@@ -38,45 +43,46 @@ const App = () => {
     }
     }, []);
 
-  useEffect(() => {
-    const navBtnWork = document.getElementById("btnWork");
-    const navBtnAbout = document.getElementById("btnAbout");
-    const navBtnResume = document.getElementById("btnResume");
 
-    const projComp = document.getElementById("wrapperProj");
+  useEffect(() => {
+    const navBtnWorkDesk = document.getElementById("btnWorkDesk");
+    const navBtnAboutDesk = document.getElementById("btnAboutDesk");
+    const navBtnResumeDesk = document.getElementById("btnResumeDesk");
+
+    const workComp = document.getElementById("wrapperProj");
     const aboutComp = document.getElementById("wrapperAbout");
     const resumeComp = document.getElementById("wrapperResume");
 
-    const navigateToComp = (comp) => {
-      comp.scrollIntoView();
-    }
-
-      navBtnWork.addEventListener("click", (event) => {
-        navigateToComp(projComp);
+    
+      navBtnWorkDesk.addEventListener("click", (e) => {
+        workComp.scrollIntoView();
       });
     
-      navBtnAbout.addEventListener("click", (event) => {
-        navigateToComp(aboutComp);
+      navBtnAboutDesk.addEventListener("click", (e) => {
+        aboutComp.scrollIntoView()
       });
 
-      navBtnResume.addEventListener("click", (event) => {
-        navigateToComp(resumeComp);
+      navBtnResumeDesk.addEventListener("click", (e) => {
+        resumeComp.scrollIntoView();
       });
+
 
       return () => {
-        navBtnWork.removeEventListener("click", (event) => {
-          navigateToComp(projComp);
+        navBtnWorkDesk.removeEventListener("click", (e) => {
+          workComp.scrollIntoView();
         });
-        navBtnAbout.removeEventListener("click", (event) => {
-          navigateToComp(aboutComp);
+        navBtnAboutDesk.removeEventListener("click", (e) => {
+          aboutComp.scrollIntoView()
         });
-        navBtnResume.addEventListener("click", (event) => {
-          navigateToComp(resumeComp);
+        navBtnResumeDesk.removeEventListener("click", (e) => {
+          resumeComp.scrollIntoView();
         });
       }
   }, []);
 
+
   
+
 
   return (
     <Box sx={{
@@ -95,7 +101,7 @@ const App = () => {
         position: "sticky",
         top: 0
       }}>
-        <NavDesktop />
+        {mobileView ? displayMobile() : displayDesktop()}
       </Box>
 
       <Box id="wrapperProj" sx={{
