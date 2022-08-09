@@ -83,16 +83,11 @@ const App = () => {
 
   return (
     <Box sx={{
-      backgroundImage: {xs: `url(${ImageSmall})`, md: `url(${ImageBig})`},
-      backgroundSize: {xs: "cover", md: "cover"},
-      backgroundPosition: {xs: "50% 75%", md: "top"},
-      backgroundRepeat: "no-repeat",
-      height: "100%"
-  }}>
+      
+    }}>
       <Box id="wrapperNav" sx={{
         display: "flex",
         justifyContent: "center",
-        width: "device-width",
         margin: 0,
         padding: 0,
         position: "sticky",
@@ -102,9 +97,13 @@ const App = () => {
       </Box>
 
       <Box id="wrapperProj" sx={{
+        backgroundImage: {xs: `url(${ImageSmall})`, md: `url(${ImageBig})`},
+        backgroundSize: "cover",
+        backgroundPosition: {xs: "50% 75%", md: "top"},
+        backgroundRepeat: "no-repeat",
+        height: "100%",
         display: "flex",
         justifyContent: "center",
-        width: "device-width",
         margin: 0,
         padding: 0
       }}>
