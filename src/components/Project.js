@@ -6,8 +6,8 @@ const Project = ( { projName, ImgSrc, link } ) => {
     return (
         <MuiLink href={link} target="_blank" sx={{
             textDecoration: "none",
+            margin: "6rem",
             rel: "noopener",
-            width: "fit-content",
             ":hover": {
                 "& .nameOfProj": {
                     color: "#fb020a"

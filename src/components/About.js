@@ -16,8 +16,7 @@ const About = () => {
                 justifyContent: "center"
             }}>
                 <Typography variant="h1" sx={{
-                    paddingTop: "5rem",
-                    fontSize: {xs: "4rem", md: "6rem"}
+                    paddingTop: "5rem"
                 }}>
                     About Me
                 </Typography>
