@@ -46,6 +46,4 @@ import {
         </AppBar>
   )};
 
-  
-
   export default NavDesktop;

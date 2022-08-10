@@ -82,9 +82,7 @@ const App = () => {
 
 
   return (
-    <Box sx={{
-      
-    }}>
+    <Box>
       <Box id="wrapperNav" sx={{
         display: "flex",
         justifyContent: "center",
@@ -116,7 +114,8 @@ const App = () => {
 
       <Box id="wrapperResume" sx={{
         display: "flex",
-        justifyContent: "center"
+        justifyContent: "center",
+        bgcolor: "black"
       }}> 
         <Resume />
       </Box>

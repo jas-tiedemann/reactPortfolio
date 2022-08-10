@@ -1,146 +1,131 @@
 import React from "react";
 import { Typography, Box } from "@mui/material";
-import Image from "../images/lighttower-bottom-img.jpg";
 import { styled } from '@mui/system';
 
 const Resume = () => {
 
-    const CVHeaderText = styled("h3", {})({
+    const CVHeader1 = styled("h4", {})({
         color: "white",
         margin: "0"
 
       });
 
-      const CVMainText = styled(Typography, {})({
+      const CVMainText = styled("p", {})({
         color: "white",
-        fontSize: "2rem"
-
+        fontSize: "2rem",
+        paddingBottom: "2rem"
       });
 
       const CVBox = styled(Box, {})({
         color: "white",
         fontSize: "2rem",
-        margin: "1rem 0",
         display: "flex",
         flexDirection: "column"
       });
+      
+      const CVBox2 = styled(Box, {})({
+        display: "flex",
+        justifyContent: "center",
+        width: "100%",
+        margin: 0
+      });
 
     return (
+        
         <Box sx={{
-            bgcolor: "black",
-            backgroundSize: "cover",
-            backgroundPosition: {xs: "50% 75%", md: "top"},
-            backgroundRepeat: "no-repeat",
+            maxWidth: "40rem",
+            margin: "auto",
+            padding: "4rem",
             height: "100%",
             width: "100%"
         }}>
-            <Box sx={{
-                maxWidth: "40rem",
-                margin: "auto",
-                bgcolor: "black"
-            }}>
-                <Box>
-                    <Box sx={{
-                        paddingTop: "4rem",
-                        display: "flex",
-                        justifyContent: "center"
+            <Box>
+                <Box sx={{
+                    paddingTop: "4rem",
+                    display: "flex",
+                    justifyContent: "center"
+                }}>
+                    <Typography variant="h1" sx={{
+                        paddingBottom: "3rem",
+                        color: "white",
+                        fontSize: {xs: "4rem", md: "6rem"}
                     }}>
-                        <Typography variant="h1" sx={{
-                            padding: "0",
-                            color: "white",
-                            fontSize: {xs: "4rem", md: "6rem"}
-                        }}>
-                            Resume
-                        </Typography>
-                    </Box>
+                        Resume
+                    </Typography>
+                </Box>
 
+                <Box sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    flexDirection: "column",
+                    margin: "auto",
+                    paddingBottom: "4rem"
+                }}>
                     <Box sx={{
-                        padding: "4rem",
+                        padding: "0",
+                        width: "100%",
                         display: "flex",
                         justifyContent: "center",
                         flexDirection: "column",
                         margin: "auto"
                     }}>
-                        <Box sx={{
-                            padding: "0",
-                            width: "100%",
-                            display: "flex",
-                            justifyContent: "center",
-                            flexDireaction: "column",
-                            margin: "auto"
-                        }}>
-                            <Typography variant="p" sx={{
-                                color: "white",
-                                width: "100%",
-                                fontSize: "2em",
-                                display: "flex",
-                                justifyContent: "center"
+                        <CVBox2>
+                            <CVMainText sx={{
+                                padding: 0,
+                                margin: 0
                             }}>
                                 Jasper Tiedemann
-                            </Typography>
-                        </Box>
-                        <Box sx={{
-                            padding: "0",
-                            width: "100%",
-                            display: "flex",
-                            justifyContent: "center",
-                            flexDireaction: "column",
-                            margin: "auto"
-                        }}>
-                            <Typography variant="p" sx={{
-                                color: "white",
-                                width: "100%",
-                                fontSize: "2em",
-                                display: "flex",
-                                justifyContent: "center"
-                            }}>
+                            </CVMainText>
+                        </CVBox2>
+                        <CVBox2>
+                            <CVMainText>
                                 Frontend Developer
-                            </Typography>
-                        </Box>
+                            </CVMainText>
+                        </CVBox2>
                     </Box>
                 </Box>
-                <Box sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                        flexDirection: "column"
-                    }}>
-                    <CVBox>
-                        <CVHeaderText>My Profile</CVHeaderText>
-                        <CVMainText>
-                            - web developer with more than two years of experience<br></br>
-                            - work experience through apprenticeship in e-commerce company
-                        </CVMainText>
-                    </CVBox>
-                    <CVBox>
-                        <CVHeaderText>Experience</CVHeaderText>
-                        <CVMainText>
-                            08/2019 - 05/2021<br></br>
-                            apprenticeship in application development (discontinued):<br></br>
-                            moebel.de Einrichten und Wohnen AG<br></br>
-                            - programming in HTML, CSS, PHP, Javascript<br></br>
-                            - working with MYSQL und AWS
-                        </CVMainText>
-                    </CVBox>
-                    <CVBox>
-                        <CVHeaderText>Education</CVHeaderText>
-                        <CVMainText>
-                            2010-2015
-                            Gemeinschaftshauptschule Lotte:<br></br>
-                            secondary school level certificate
-                        </CVMainText>
-                    </CVBox>
-                    <CVBox>
-                        <CVHeaderText>Skills</CVHeaderText>
-                        <CVMainText>
-                            Languages:<br></br>
-                            - German (native)<br></br>
-                            - English (fluent)
-
-                            programming languages:<br></br>
-                            - HTML, CSS, Javascript, React.js, MYSQL
-                        </CVMainText>
-                    </CVBox>
-                </Box>
+            </Box>
+            <Box sx={{
+                display: "flex",
+                justifyContent: "center",
+                flexDirection: "column"
+                }}>
+                <CVBox>
+                    <CVHeader1>My Profile</CVHeader1>
+                    <CVMainText>
+                        - web developer with more than two years of experience<br></br>
+                        - work experience through apprenticeship in e-commerce company
+                    </CVMainText>
+                </CVBox>
+                <CVBox>
+                    <CVHeader1>Experience</CVHeader1>
+                    <CVMainText>
+                        08/2019 - 05/2021<br></br>
+                        apprenticeship in application development (discontinued):<br></br>
+                        moebel.de Einrichten und Wohnen AG<br></br>
+                        - programming in HTML, CSS, PHP, Javascript<br></br>
+                        - working with MYSQL and AWS
+                    </CVMainText>
+                </CVBox>
+                <CVBox>
+                    <CVHeader1>Education</CVHeader1>
+                    <CVMainText>
+                        2010-2015
+                        Gemeinschaftshauptschule Lotte:<br></br>
+                        secondary school level certificate
+                    </CVMainText>
+                </CVBox>
+                <CVBox>
+                    <CVHeader1>Skills</CVHeader1>
+                    <CVMainText>
+                        Languages:<br></br>
+                        - German (native)<br></br>
+                        - English (fluent)<br></br>
+                        <br></br>
+                        programming languages:<br></br>
+                        - HTML, CSS, Javascript, React.js, MYSQL
+                    </CVMainText>
+                </CVBox>
             </Box>
         </Box>
         )
