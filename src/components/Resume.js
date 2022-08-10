@@ -20,7 +20,7 @@ const Resume = () => {
       const CVBox = styled(Box, {})({
         color: "white",
         fontSize: "2rem",
-        margin: "1rem 2rem",
+        margin: "1rem 0",
         display: "flex",
         flexDirection: "column"
       });
@@ -28,7 +28,6 @@ const Resume = () => {
     return (
         <Box sx={{
             bgcolor: "black",
-            backgroundImage: `url(${Image})`,
             backgroundSize: "cover",
             backgroundPosition: {xs: "50% 75%", md: "top"},
             backgroundRepeat: "no-repeat",
@@ -37,11 +36,12 @@ const Resume = () => {
         }}>
             <Box sx={{
                 maxWidth: "40rem",
-                margin: "auto"
+                margin: "auto",
+                bgcolor: "black"
             }}>
                 <Box>
                     <Box sx={{
-                        paddingTop: "5rem",
+                        paddingTop: "4rem",
                         display: "flex",
                         justifyContent: "center"
                     }}>
