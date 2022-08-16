@@ -22,7 +22,7 @@ const Resume = () => {
         display: "flex",
         flexDirection: "column"
       });
-      
+
       const CVBox2 = styled(Box, {})({
         display: "flex",
         justifyContent: "center",
@@ -93,7 +93,7 @@ const Resume = () => {
                 <CVBox>
                     <CVHeader1>My Profile</CVHeader1>
                     <CVMainText>
-                        - web developer with more than two years of experience<br></br>
+                        - web developer with more than three years of experience<br></br>
                         - work experience through apprenticeship in e-commerce company
                     </CVMainText>
                 </CVBox>
@@ -110,7 +110,7 @@ const Resume = () => {
                 <CVBox>
                     <CVHeader1>Education</CVHeader1>
                     <CVMainText>
-                        2010-2015
+                        2010 - 2015<br></br>
                         Gemeinschaftshauptschule Lotte:<br></br>
                         secondary school level certificate
                     </CVMainText>
@@ -122,7 +122,7 @@ const Resume = () => {
                         - German (native)<br></br>
                         - English (fluent)<br></br>
                         <br></br>
-                        programming languages:<br></br>
+                        Programming languages:<br></br>
                         - HTML, CSS, Javascript, React.js, MYSQL
                     </CVMainText>
                 </CVBox>

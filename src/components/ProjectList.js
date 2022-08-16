@@ -1,37 +1,57 @@
 import React from "react";
 import Project from "./Project";
-import { Grid, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import HangmanImage from "../images/hangman-screenshot.PNG";
 import AsciiImage from "../images/ascii-tree-img.PNG";
+import { styled } from '@mui/system';
 
 
 const ProjectList = () => {
+      const ItemBox = styled(Box, {})({
+        display: "flex",
+        justifyContent: "center",
+        margin: "auto"
+      });
+
+
     return (
-        <Grid container xs={12} spacing={6} item={true} sx={{
-            marginBottom: "8rem",
-            minHeight: "70rem",
-            alignItems: "center",
-            justifyContent: "center"
+        <Box sx={{
+            width: "100%"
             }}>
-            <Grid item xs={12} align="center">
+            <Box sx={{
+                padding: 0,
+                width: "100%",
+                display: "flex",
+                justifyContent: "center",
+                bgcolor: "white" 
+            }}>
                 <Typography variant="h1" sx={{
                     fontSize: {xs: "4rem", md: "6rem"},
-                    marginTop: "10rem",
-                    width: {xs: "26rem", md: "30rem", xl: "40rem"},
-                    color: "black",
-                    bgcolor: {xs: "white", md: "transparent"},
-                    borderRadius: 2
+                    color: "black"                   
                 }}>
                     Projects
                 </Typography>
-            </Grid>
-            <Grid item lg={6} align="center">
-                <Project projName={"Hangman"} ImgSrc={HangmanImage} link={"http://localhost:8000/"} />
-            </Grid>
-            <Grid item lg={6} align="center">
-                <Project projName={"ASCII-Tree"} ImgSrc={AsciiImage} />
-            </Grid>
-        </Grid>
+            </Box>
+            <Box sx={{
+                display: "flex",
+                flexDirection: {xs: "column", lg: "row"},
+                minHeight: {xs: "20rem", md: "50rem"},
+                width: "100%",
+                justifyContent: "center",
+                padding: 0
+            }}>
+                <ItemBox sx={{
+                    width: {xs: "20rem", md: "50rem"}
+                }}>
+                    <Project projName={"Hangman"} ImgSrc={HangmanImage} link={"http://localhost:8000/"} />
+                </ItemBox>
+                <ItemBox sx={{
+                    width: {xs: "20rem", md: "50rem"}
+                }}>
+                    <Project projName={"ASCII-Tree"} ImgSrc={AsciiImage} />
+                </ItemBox>
+            </Box>
+        </Box>
     );
 }
 

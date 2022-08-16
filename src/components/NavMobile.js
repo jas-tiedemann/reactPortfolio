@@ -26,10 +26,6 @@ import {
   const NavMobile = () => {
     const [drawerOpen, setDrawerOpen] = useState(false);
 
-    const drawerNavClick = (comp) => {
-        comp.scrollIntoView();
-    }
-    
     const workComp = document.getElementById("wrapperProj");
     const aboutComp = document.getElementById("wrapperAbout");
     const resumeComp = document.getElementById("wrapperResume");
@@ -52,17 +48,17 @@ import {
                 </IconButton>
                 
                 <Drawer open={drawerOpen} onClose={() => setDrawerOpen(false)}>
-                    <NavBtnMob id="btnWorkMob" variant="text" onClick={() => drawerNavClick(workComp)}>
+                    <NavBtnMob id="btnWorkMob" variant="text" onClick={() => workComp.scrollIntoView()}>
                         <Typography variant="h4">
                             Work
                         </Typography>
                     </NavBtnMob>
-                    <NavBtnMob id="btnAboutMob" variant="text" onClick={() => drawerNavClick(aboutComp)}>
+                    <NavBtnMob id="btnAboutMob" variant="text" onClick={() => aboutComp.scrollIntoView()}>
                         <Typography variant="h4">
                             About
                         </Typography>
                     </NavBtnMob>
-                    <NavBtnMob id="btnResumeMob" variant="text" onClick={() => drawerNavClick(resumeComp)} >
+                    <NavBtnMob id="btnResumeMob" variant="text" onClick={() => resumeComp.scrollIntoView()}>
                         <Typography variant="h4">
                             Resume
                         </Typography>

@@ -19,6 +19,11 @@ import {
   });
 
   const NavDesktop = () => {
+    
+    const workComp = document.getElementById("wrapperProj");
+    const aboutComp = document.getElementById("wrapperAbout");
+    const resumeComp = document.getElementById("wrapperResume");
+    
     return (
         <AppBar position="sticky" sx={{
             flexDirection: "row-reverse",
@@ -27,17 +32,17 @@ import {
             height: "5rem"
         }}>
             <Toolbar>
-                <NavBtnDesk id="btnWorkDesk" variant="text">
+                <NavBtnDesk id="btnWorkDesk" variant="text" onClick={() => workComp.scrollIntoView()}>
                     <Typography variant="h4">
                         Work
                     </Typography>
                 </NavBtnDesk>
-                <NavBtnDesk id="btnAboutDesk" variant="text">
+                <NavBtnDesk id="btnAboutDesk" variant="text" onClick={() => aboutComp.scrollIntoView()}>
                     <Typography variant="h4">
                         About
                     </Typography>
                 </NavBtnDesk>
-                <NavBtnDesk id="btnResumeDesk" variant="text" >
+                <NavBtnDesk id="btnResumeDesk" variant="text" onClick={() => resumeComp.scrollIntoView()}>
                     <Typography variant="h4">
                         Resume
                     </Typography>

@@ -32,7 +32,7 @@ const About = () => {
                 <Typography variant="p" sx={{
                     fontSize: "2rem"
                 }}>
-                    Personal: My name is Jasper Tiedemann and I'm a web developer based in Germany with over 2 years of experience.
+                    Personal: My name is Jasper Tiedemann and I'm a web developer based in Germany with over three years of experience.
                     <br></br>
                     <br></br>
                     Skills: Most recently I taught myself React.js and Material-UI with which I created a Hangman web application and this website.

@@ -16,6 +16,7 @@ import ImageSmall from "./images/lighttower-small-img.png";
 const App = () => {
   const [mobileView, setMobileView] = useState(false);
 
+
   const displayMobile = () => {
     return (
       <NavMobile />
@@ -44,43 +45,6 @@ const App = () => {
     }, []);
 
 
-  useEffect(() => {
-    const navBtnWorkDesk = document.getElementById("btnWorkDesk");
-    const navBtnAboutDesk = document.getElementById("btnAboutDesk");
-    const navBtnResumeDesk = document.getElementById("btnResumeDesk");
-
-    const workComp = document.getElementById("wrapperProj");
-    const aboutComp = document.getElementById("wrapperAbout");
-    const resumeComp = document.getElementById("wrapperResume");
-
-    
-      navBtnWorkDesk.addEventListener("click", (e) => {
-        workComp.scrollIntoView();
-      });
-    
-      navBtnAboutDesk.addEventListener("click", (e) => {
-        aboutComp.scrollIntoView()
-      });
-
-      navBtnResumeDesk.addEventListener("click", (e) => {
-        resumeComp.scrollIntoView();
-      });
-
-
-      return () => {
-        navBtnWorkDesk.removeEventListener("click", (e) => {
-          workComp.scrollIntoView();
-        });
-        navBtnAboutDesk.removeEventListener("click", (e) => {
-          aboutComp.scrollIntoView()
-        });
-        navBtnResumeDesk.removeEventListener("click", (e) => {
-          resumeComp.scrollIntoView();
-        });
-      }
-  }, []);
-
-
   return (
     <Box>
       <Box id="wrapperNav" sx={{
@@ -100,6 +64,7 @@ const App = () => {
         backgroundPosition: {xs: "50% 75%", md: "top"},
         backgroundRepeat: "no-repeat",
         height: "100%",
+        width: "100%",
         display: "flex",
         justifyContent: "center",
         margin: 0,
