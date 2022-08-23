@@ -9,8 +9,7 @@ import Resume from './components/Resume';
 import NavDesktop from './components/NavDesktop';
 import NavMobile from './components/NavMobile';
 import Contact from './components/Contact';
-import ImageBig from "./images/lighttower-img.jpg";
-import ImageSmall from "./images/lighttower-small-img.png";
+import ImageBig from "./images/mountain-img.jpg";
 import ForestImage from "./images/forest-img.jpg";
 
 
@@ -61,9 +60,9 @@ const App = () => {
       </Box>
 
       <Box id="wrapperProject" sx={{
-        backgroundImage: {xs: `url(${ImageSmall})`, md: `url(${ImageBig})`},
+        backgroundImage: {xs: `url(${ForestImage})`, md: `url(${ForestImage})`},
         backgroundSize: "cover",
-        backgroundPosition: {xs: "50% 75%", md: "top"},
+        backgroundPosition: {xs: "50%", md: "top"},
         backgroundRepeat: "no-repeat",
         height: "100%",
         width: "100%",
@@ -97,9 +96,9 @@ const App = () => {
       </Box>
 
       <Box id="wrapperContact" sx={{
-        backgroundImage: `url(${ForestImage})`,
+        backgroundImage: `url(${ImageBig})`,
         backgroundSize: "cover",
-        backgroundPosition: {xs: "50% 75%", md: "top"},
+        backgroundPosition: {xs: "50%", md: "75%"},
         backgroundRepeat: "no-repeat",
         height: "100%",
         width: "100%"

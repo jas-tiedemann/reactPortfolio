@@ -26,7 +26,7 @@ const ProjectList = () => {
                 bgcolor: "transparent" 
             }}>
                 <Typography variant="h1" sx={{
-                    fontSize: {xs: "4rem", md: "6rem"},
+                    fontSize: {xs: "3rem", sm: "4rem", md: "6rem"},
                     color: "black"
                 }}>
                     Projects

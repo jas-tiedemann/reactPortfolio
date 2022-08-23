@@ -46,7 +46,7 @@ const Resume = () => {
                     <Typography variant="h1" sx={{
                         paddingBottom: "3rem",
                         color: "white",
-                        fontSize: {xs: "4rem", sm: "4rem", md: "6rem"}
+                        fontSize: {xs: "3rem", sm: "4rem", md: "6rem"}
                     }}>
                         Resume
                     </Typography>

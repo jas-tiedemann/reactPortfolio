@@ -15,7 +15,7 @@ import {
   });
 
   const HeaderField = styled("p", {})({
-    fontSize: "2rem"
+    fontSize: "1.5rem"
   });
 
   const Contact = () => {
@@ -45,6 +45,7 @@ import {
         borderRadius: "5px",
         boxShadow: 9,
         width: {xs: "20rem", md: "30rem"},
+        height: "fit-content",
         padding: "3rem"
       }}>
         <form>
