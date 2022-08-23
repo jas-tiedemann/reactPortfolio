@@ -31,11 +31,9 @@ const Resume = () => {
       });
 
     return (
-        
         <Box sx={{
             maxWidth: "40rem",
             margin: "auto",
-            padding: "4rem",
             height: "100%",
             width: "100%"
         }}>
@@ -48,7 +46,7 @@ const Resume = () => {
                     <Typography variant="h1" sx={{
                         paddingBottom: "3rem",
                         color: "white",
-                        fontSize: {xs: "4rem", md: "6rem"}
+                        fontSize: {xs: "4rem", sm: "4rem", md: "6rem"}
                     }}>
                         Resume
                     </Typography>
@@ -112,7 +110,7 @@ const Resume = () => {
                     <CVMainText>
                         2010 - 2015<br></br>
                         Gemeinschaftshauptschule Lotte:<br></br>
-                        secondary school level certificate
+                        General Certificate of Secondary Education
                     </CVMainText>
                 </CVBox>
                 <CVBox>

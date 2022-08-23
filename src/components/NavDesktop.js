@@ -14,37 +14,37 @@ import {
     display: "inline-block",
     textTransform: "none",
     backgroundColor: "transparent",
-    margin: {xl: "2rem"},
-    width: {md: "7rem"}
-  });
+    margin: "2rem",
+    width: "fit-content"
+  }); 
 
   const NavDesktop = () => {
-    
-    const workComp = document.getElementById("wrapperProj");
-    const aboutComp = document.getElementById("wrapperAbout");
-    const resumeComp = document.getElementById("wrapperResume");
-    
     return (
-        <AppBar position="sticky" sx={{
+        <AppBar position="fixed" sx={{
             flexDirection: "row-reverse",
             backgroundColor: "black",
             padding: "0 2rem",
             height: "5rem"
         }}>
             <Toolbar>
-                <NavBtnDesk id="btnWorkDesk" variant="text" onClick={() => workComp.scrollIntoView()}>
+                <NavBtnDesk id="btnWorkDesk" variant="text" onClick={() => document.getElementById("wrapperProject").scrollIntoView({block: "start"})}>
                     <Typography variant="h4">
                         Work
                     </Typography>
                 </NavBtnDesk>
-                <NavBtnDesk id="btnAboutDesk" variant="text" onClick={() => aboutComp.scrollIntoView()}>
+                <NavBtnDesk id="btnAboutDesk" variant="text" onClick={() => document.getElementById("wrapperAbout").scrollIntoView({block: "start"})}>
                     <Typography variant="h4">
                         About
                     </Typography>
                 </NavBtnDesk>
-                <NavBtnDesk id="btnResumeDesk" variant="text" onClick={() => resumeComp.scrollIntoView()}>
+                <NavBtnDesk id="btnResumeDesk" variant="text" onClick={() => document.getElementById("wrapperResume").scrollIntoView({block: "start"})}>
                     <Typography variant="h4">
                         Resume
+                    </Typography>
+                </NavBtnDesk>
+                <NavBtnDesk id="btnContactDesk" variant="text" onClick={() => document.getElementById("wrapperContact").scrollIntoView({block: "start"})}>
+                    <Typography variant="h4">
+                        Contact
                     </Typography>
                 </NavBtnDesk>
             </Toolbar>

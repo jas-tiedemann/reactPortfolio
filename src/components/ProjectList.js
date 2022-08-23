@@ -19,15 +19,15 @@ const ProjectList = () => {
             width: "100%"
             }}>
             <Box sx={{
-                padding: 0,
+                paddingTop: "8rem",
                 width: "100%",
                 display: "flex",
                 justifyContent: "center",
-                bgcolor: "white" 
+                bgcolor: "transparent" 
             }}>
                 <Typography variant="h1" sx={{
                     fontSize: {xs: "4rem", md: "6rem"},
-                    color: "black"                   
+                    color: "black"
                 }}>
                     Projects
                 </Typography>

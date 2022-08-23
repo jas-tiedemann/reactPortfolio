@@ -26,13 +26,8 @@ import {
   const NavMobile = () => {
     const [drawerOpen, setDrawerOpen] = useState(false);
 
-    const workComp = document.getElementById("wrapperProj");
-    const aboutComp = document.getElementById("wrapperAbout");
-    const resumeComp = document.getElementById("wrapperResume");
-
-
     return (        
-        <AppBar position="sticky" sx={{
+        <AppBar position="fixed" sx={{
             backgroundColor: "black",
             display: "flex",
             justifyContent: "center",
@@ -48,19 +43,24 @@ import {
                 </IconButton>
                 
                 <Drawer open={drawerOpen} onClose={() => setDrawerOpen(false)}>
-                    <NavBtnMob id="btnWorkMob" variant="text" onClick={() => workComp.scrollIntoView()}>
+                    <NavBtnMob id="btnWorkMob" variant="text" onClick={() => document.getElementById("wrapperProject").scrollIntoView({block: "start"})}>
                         <Typography variant="h4">
                             Work
                         </Typography>
                     </NavBtnMob>
-                    <NavBtnMob id="btnAboutMob" variant="text" onClick={() => aboutComp.scrollIntoView()}>
+                    <NavBtnMob id="btnAboutMob" variant="text" onClick={() => document.getElementById("wrapperAbout").scrollIntoView({block: "start"})}>
                         <Typography variant="h4">
                             About
                         </Typography>
                     </NavBtnMob>
-                    <NavBtnMob id="btnResumeMob" variant="text" onClick={() => resumeComp.scrollIntoView()}>
+                    <NavBtnMob id="btnResumeMob" variant="text" onClick={() => document.getElementById("wrapperResume").scrollIntoView({block: "start"})}>
                         <Typography variant="h4">
                             Resume
+                        </Typography>
+                    </NavBtnMob>
+                    <NavBtnMob id="btnContactMob" variant="text" onClick={() => document.getElementById("wrapperContact").scrollIntoView({block: "start"})}>
+                        <Typography variant="h4">
+                            Contact
                         </Typography>
                     </NavBtnMob>
                 </Drawer>

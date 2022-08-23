@@ -8,8 +8,10 @@ import ProjectList from './components/ProjectList';
 import Resume from './components/Resume';
 import NavDesktop from './components/NavDesktop';
 import NavMobile from './components/NavMobile';
-import ImageBig from "./images/lighttower-img.png";
+import Contact from './components/Contact';
+import ImageBig from "./images/lighttower-img.jpg";
 import ImageSmall from "./images/lighttower-small-img.png";
+import ForestImage from "./images/forest-img.jpg";
 
 
 
@@ -58,7 +60,7 @@ const App = () => {
         {mobileView ? displayMobile() : displayDesktop()}
       </Box>
 
-      <Box id="wrapperProj" sx={{
+      <Box id="wrapperProject" sx={{
         backgroundImage: {xs: `url(${ImageSmall})`, md: `url(${ImageBig})`},
         backgroundSize: "cover",
         backgroundPosition: {xs: "50% 75%", md: "top"},
@@ -73,16 +75,36 @@ const App = () => {
         <ProjectList />
       </Box>
 
-      <Box id="wrapperAbout"> 
+      <Box id="wrapperAbout" sx={{
+        bgcolor: "white",
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: "column",
+        padding: "2rem",
+        marginBottom: "3rem",
+        minHeight: "50rem"
+      }}> 
         <About />
       </Box>
 
       <Box id="wrapperResume" sx={{
         display: "flex",
         justifyContent: "center",
+        padding: "2rem",
         bgcolor: "black"
       }}> 
         <Resume />
+      </Box>
+
+      <Box id="wrapperContact" sx={{
+        backgroundImage: `url(${ForestImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: {xs: "50% 75%", md: "top"},
+        backgroundRepeat: "no-repeat",
+        height: "100%",
+        width: "100%"
+      }}> 
+        <Contact />
       </Box>
     </Box>
   );
