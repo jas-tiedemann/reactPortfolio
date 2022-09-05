@@ -28,22 +28,22 @@ import {
         }}>
             <Toolbar>
                 <NavBtnDesk id="btnWorkDesk" variant="text" onClick={() => document.getElementById("wrapperProject").scrollIntoView({block: "start"})}>
-                    <Typography variant="h4">
+                    <Typography variant="p">
                         Work
                     </Typography>
                 </NavBtnDesk>
                 <NavBtnDesk id="btnAboutDesk" variant="text" onClick={() => document.getElementById("wrapperAbout").scrollIntoView({block: "start"})}>
-                    <Typography variant="h4">
+                    <Typography variant="p">
                         About
                     </Typography>
                 </NavBtnDesk>
                 <NavBtnDesk id="btnResumeDesk" variant="text" onClick={() => document.getElementById("wrapperResume").scrollIntoView({block: "start"})}>
-                    <Typography variant="h4">
+                    <Typography variant="p">
                         Resume
                     </Typography>
                 </NavBtnDesk>
                 <NavBtnDesk id="btnContactDesk" variant="text" onClick={() => document.getElementById("wrapperContact").scrollIntoView({block: "start"})}>
-                    <Typography variant="h4">
+                    <Typography variant="p">
                         Contact
                     </Typography>
                 </NavBtnDesk>

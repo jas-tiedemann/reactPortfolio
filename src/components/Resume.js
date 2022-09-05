@@ -7,28 +7,27 @@ const Resume = () => {
     const CVHeader1 = styled("h4", {})({
         color: "white",
         margin: "0"
+    });
 
-      });
-
-      const CVMainText = styled("p", {})({
+    const CVMainText = styled("p", {})({
         color: "white",
         fontSize: "2rem",
         paddingBottom: "2rem"
-      });
+    });
 
-      const CVBox = styled(Box, {})({
+    const CVBox = styled(Box, {})({
         color: "white",
         fontSize: "2rem",
         display: "flex",
         flexDirection: "column"
-      });
+    });
 
-      const CVBox2 = styled(Box, {})({
+    const CVBox2 = styled(Box, {})({
         display: "flex",
         justifyContent: "center",
         width: "100%",
         margin: 0
-      });
+    });
 
     return (
         <Box sx={{

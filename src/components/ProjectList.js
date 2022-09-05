@@ -7,11 +7,12 @@ import { styled } from '@mui/system';
 
 
 const ProjectList = () => {
-      const ItemBox = styled(Box, {})({
+
+    const ItemBox = styled(Box, {})({
         display: "flex",
         justifyContent: "center",
         margin: "auto"
-      });
+    });
 
 
     return (

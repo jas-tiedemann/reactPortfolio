@@ -9,7 +9,7 @@ const Project = ( { projName, ImgSrc, link } ) => {
             rel: "noopener",
             ":hover": {
                 "& .nameOfProj": {
-                    color: "#fb020a"
+                    color: "#1E90FF"
                 },
                 "& .linkBox": {
                     boxShadow: 20

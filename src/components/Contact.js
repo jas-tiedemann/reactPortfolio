@@ -1,4 +1,6 @@
 import React from "react";
+import emailjs from '@emailjs/browser';
+import { useRef } from "react";
 import { 
     Box,
     TextField,
@@ -18,11 +20,27 @@ import {
     fontSize: "1.5rem"
   });
 
+
   const Contact = () => {
-        
+
+  const form = useRef();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm("SERVICE_ID", "TEMPLATE_ID", form.current, "PUBLIC_KEY")
+      .then((result) => {
+        console.log(result.text);
+        alert("E-Mail sent successfully!");
+        window.location.reload(false);
+      }, (error) => {
+        console.log(error.text);
+      });
+  };
+
     return (
     <Box sx={{
-      minHeight: "60rem",
+      minHeight: "50rem",
       paddingBottom: "3rem",
       display: "flex",
       flexDirection: "column",
@@ -34,7 +52,7 @@ import {
         justifyContent: "center"
       }}>
         <Typography variant="h1" sx={{
-            padding: "4rem 0",
+            padding: {xs: "2rem 0", md: "4rem 0"},
             fontSize: {xs: "3rem", sm: "4rem", md: "6rem"}
         }}>
             Contact
@@ -44,37 +62,41 @@ import {
         bgcolor: "white",
         borderRadius: "5px",
         boxShadow: 9,
-        width: {xs: "20rem", md: "30rem"},
+        width: {xs: "20rem", sm: "26rem", md: "30rem"},
         height: "fit-content",
         padding: "3rem"
       }}>
-        <form>
+        <form
+          id="messageForm"
+          onSubmit={handleSubmit}
+          ref={form}
+        >
           <TextBox>
             <HeaderField>
               Name:
             </HeaderField>
-            <TextField>
+            <TextField required name="name">
             </TextField>
           </TextBox>
           <TextBox>
             <HeaderField>
-              Email:
+              E-mail:
             </HeaderField>
-            <TextField>
+            <TextField required name="email">
             </TextField>
           </TextBox>
           <TextBox>
             <HeaderField>
               Message:
             </HeaderField>
-            <TextField multiline rows={4}>
+            <TextField multiline rows={4} required name="message">
             </TextField>
           </TextBox>
           <Box sx={{
             display: "flex",
             justifyContent: "center"
           }}>
-            <Button sx={{
+            <Button type="submit" sx={{
               bgcolor: "black",
               color: "white",
               fontSize: "1rem",
@@ -82,12 +104,13 @@ import {
               width: "8rem",
               marginTop: "2rem",
               ":hover": {
-                      bgcolor: "white",
-                      color: "black",
-                      border: "1px solid"
+                    bgcolor: "white",
+                    color: "black",
+                    border: "1px solid"
                   }
             }}>
               <SendIcon />
+              
             </Button>
           </Box>
         </form>
