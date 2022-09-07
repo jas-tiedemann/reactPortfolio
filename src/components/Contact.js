@@ -13,11 +13,8 @@ import {
   const TextBox = styled(Box, {})({
     display: "flex",
     justifyContent: "center",
-    flexDirection: "column"
-  });
-
-  const HeaderField = styled("p", {})({
-    fontSize: "1.5rem"
+    flexDirection: "column",
+    margin: "2rem 0"
   });
 
 
@@ -51,15 +48,14 @@ import {
         display: "flex",
         justifyContent: "center"
       }}>
-        <Typography variant="h1" sx={{
-            padding: {xs: "2rem 0", md: "4rem 0"},
-            fontSize: {xs: "3rem", sm: "4rem", md: "6rem"}
+        <Typography variant="h2" sx={{
+            padding: {xs: "2rem 0", md: "4rem 0"}
         }}>
             Contact
         </Typography>
       </Box>
       <Box sx={{
-        bgcolor: "white",
+        bgcolor: "light",
         borderRadius: "5px",
         boxShadow: 9,
         width: {xs: "20rem", sm: "26rem", md: "30rem"},
@@ -72,23 +68,17 @@ import {
           ref={form}
         >
           <TextBox>
-            <HeaderField>
-              Name:
-            </HeaderField>
+            <Typography variant="p">Name:</Typography>
             <TextField required name="name">
             </TextField>
           </TextBox>
           <TextBox>
-            <HeaderField>
-              E-mail:
-            </HeaderField>
+            <Typography variant="p">E-mail:</Typography>
             <TextField required name="email">
             </TextField>
           </TextBox>
           <TextBox>
-            <HeaderField>
-              Message:
-            </HeaderField>
+            <Typography variant="p">Message:</Typography>
             <TextField multiline rows={4} required name="message">
             </TextField>
           </TextBox>
@@ -98,19 +88,18 @@ import {
           }}>
             <Button type="submit" sx={{
               bgcolor: "black",
-              color: "white",
+              color: "light",
               fontSize: "1rem",
               height: "3rem",
               width: "8rem",
               marginTop: "2rem",
               ":hover": {
-                    bgcolor: "white",
+                    bgcolor: "light",
                     color: "black",
                     border: "1px solid"
                   }
             }}>
               <SendIcon />
-              
             </Button>
           </Box>
         </form>

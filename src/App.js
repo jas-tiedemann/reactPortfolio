@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Box } from "@mui/material";
+import { Box, ThemeProvider } from "@mui/material";
+import theme from "./themes/theme";
 import About from './components/About';
 import ProjectList from './components/ProjectList';
 import Resume from './components/Resume';
@@ -9,7 +10,6 @@ import NavMobile from './components/NavMobile';
 import Contact from './components/Contact';
 import ImageShore from "./images/shore-img.jpg";
 import ImageForest from "./images/forest-img.jpg";
-
 
 const App = () => {
 
@@ -44,6 +44,8 @@ const App = () => {
 
 
   return (
+    
+    <ThemeProvider theme={theme}>
       <body>
         <header>
           <Box id="wrapperNav" sx={{
@@ -59,6 +61,17 @@ const App = () => {
         </header>
 
         <main>
+          <Box id="wrapperAbout" sx={{
+            bgcolor: "light",
+            display: "flex",
+            justifyContent: "center",
+            flexDirection: "column",
+            padding: "2rem",
+            minHeight: "50rem"
+          }}> 
+            <About />
+          </Box>
+
           <Box id="wrapperProject" sx={{
             backgroundImage: `url(${ImageForest})`,
             backgroundSize: "cover",
@@ -71,26 +84,15 @@ const App = () => {
             margin: 0,
             padding: 0
           }}>
+            
             <ProjectList />
-          </Box>
-
-          <Box id="wrapperAbout" sx={{
-            bgcolor: "white",
-            display: "flex",
-            justifyContent: "center",
-            flexDirection: "column",
-            padding: "2rem",
-            marginBottom: "3rem",
-            minHeight: "50rem"
-          }}> 
-            <About />
           </Box>
 
           <Box id="wrapperResume" sx={{
             display: "flex",
             justifyContent: "center",
             padding: "2rem",
-            bgcolor: "black"
+            bgcolor: "dark"
           }}> 
             <Resume />
           </Box>
@@ -108,10 +110,11 @@ const App = () => {
         </main>
 
         <footer>
-          <a>Terms of Service</a>
-          <a>Privacy Policy</a>
+          <p>Terms of Service</p>
+          <p>Privacy Policy</p>
         </footer>
       </body>
+    </ThemeProvider>
   );
 }
 export default App;

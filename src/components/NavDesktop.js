@@ -22,19 +22,19 @@ import {
     return (
         <AppBar position="fixed" sx={{
             flexDirection: "row-reverse",
-            backgroundColor: "black",
+            backgroundColor: "dark",
             padding: "0 2rem",
             height: "5rem"
         }}>
             <Toolbar>
-                <NavBtnDesk id="btnWorkDesk" variant="text" onClick={() => document.getElementById("wrapperProject").scrollIntoView({block: "start"})}>
-                    <Typography variant="p">
-                        Work
-                    </Typography>
-                </NavBtnDesk>
                 <NavBtnDesk id="btnAboutDesk" variant="text" onClick={() => document.getElementById("wrapperAbout").scrollIntoView({block: "start"})}>
                     <Typography variant="p">
                         About
+                    </Typography>
+                </NavBtnDesk>
+                <NavBtnDesk id="btnWorkDesk" variant="text" onClick={() => document.getElementById("wrapperProject").scrollIntoView({block: "start"})}>
+                    <Typography variant="p">
+                        Work
                     </Typography>
                 </NavBtnDesk>
                 <NavBtnDesk id="btnResumeDesk" variant="text" onClick={() => document.getElementById("wrapperResume").scrollIntoView({block: "start"})}>

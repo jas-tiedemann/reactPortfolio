@@ -5,8 +5,8 @@ import HangmanImage from "../images/hangman-screenshot.PNG";
 import AsciiImage from "../images/ascii-tree-img.PNG";
 import { styled } from '@mui/system';
 
-
 const ProjectList = () => {
+
 
     const ItemBox = styled(Box, {})({
         display: "flex",
@@ -26,10 +26,7 @@ const ProjectList = () => {
                 justifyContent: "center",
                 bgcolor: "transparent" 
             }}>
-                <Typography variant="h1" sx={{
-                    fontSize: {xs: "3rem", sm: "4rem", md: "6rem"},
-                    color: "black"
-                }}>
+                <Typography variant="h2">
                     Projects
                 </Typography>
             </Box>
@@ -37,9 +34,10 @@ const ProjectList = () => {
                 display: "flex",
                 flexDirection: {xs: "column", lg: "row"},
                 minHeight: {xs: "20rem", md: "50rem"},
-                width: "100%",
+                width: "80%",
                 justifyContent: "center",
-                padding: 0
+                padding: 0,
+                margin: "auto"
             }}>
                 <ItemBox sx={{
                     width: {xs: "20rem", md: "50rem"}

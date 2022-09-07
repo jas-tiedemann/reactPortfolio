@@ -4,17 +4,6 @@ import { styled } from '@mui/system';
 
 const Resume = () => {
 
-    const CVHeader1 = styled("h4", {})({
-        color: "white",
-        margin: "0"
-    });
-
-    const CVMainText = styled("p", {})({
-        color: "white",
-        fontSize: "2rem",
-        paddingBottom: "2rem"
-    });
-
     const CVBox = styled(Box, {})({
         color: "white",
         fontSize: "2rem",
@@ -23,6 +12,7 @@ const Resume = () => {
     });
 
     const CVBox2 = styled(Box, {})({
+        color: "white",
         display: "flex",
         justifyContent: "center",
         width: "100%",
@@ -42,10 +32,9 @@ const Resume = () => {
                     display: "flex",
                     justifyContent: "center"
                 }}>
-                    <Typography variant="h1" sx={{
+                    <Typography variant="h2" sx={{
                         paddingBottom: "3rem",
-                        color: "white",
-                        fontSize: {xs: "3rem", sm: "4rem", md: "6rem"}
+                        color: "white"
                     }}>
                         Resume
                     </Typography>
@@ -67,17 +56,17 @@ const Resume = () => {
                         margin: "auto"
                     }}>
                         <CVBox2>
-                            <CVMainText sx={{
+                            <Typography variant="p" sx={{
                                 padding: 0,
                                 margin: 0
                             }}>
                                 Jasper Tiedemann
-                            </CVMainText>
+                            </Typography>
                         </CVBox2>
                         <CVBox2>
-                            <CVMainText>
+                            <Typography variant="p">
                                 Frontend Developer
-                            </CVMainText>
+                            </Typography>
                         </CVBox2>
                     </Box>
                 </Box>
@@ -88,40 +77,40 @@ const Resume = () => {
                 flexDirection: "column"
                 }}>
                 <CVBox>
-                    <CVHeader1>My Profile</CVHeader1>
-                    <CVMainText>
+                    <Typography variant="h3">My Profile</Typography>
+                    <Typography variant="p">
                         - web developer with more than three years of experience<br></br>
                         - work experience through apprenticeship in e-commerce company
-                    </CVMainText>
+                    </Typography>
                 </CVBox>
                 <CVBox>
-                    <CVHeader1>Experience</CVHeader1>
-                    <CVMainText>
+                    <Typography variant="h3">Experience</Typography>
+                    <Typography variant="p">
                         08/2019 - 05/2021<br></br>
                         apprenticeship in application development (discontinued):<br></br>
                         moebel.de Einrichten und Wohnen AG<br></br>
                         - programming in HTML, CSS, PHP, Javascript<br></br>
                         - working with MYSQL and AWS
-                    </CVMainText>
+                    </Typography>
                 </CVBox>
                 <CVBox>
-                    <CVHeader1>Education</CVHeader1>
-                    <CVMainText>
+                    <Typography variant="h3">Education</Typography>
+                    <Typography variant="p">
                         2010 - 2015<br></br>
                         Gemeinschaftshauptschule Lotte:<br></br>
                         General Certificate of Secondary Education
-                    </CVMainText>
+                    </Typography>
                 </CVBox>
                 <CVBox>
-                    <CVHeader1>Skills</CVHeader1>
-                    <CVMainText>
+                    <Typography variant="h3">Skills</Typography>
+                    <Typography variant="p">
                         Languages:<br></br>
                         - German (native)<br></br>
                         - English (fluent)<br></br>
                         <br></br>
                         Programming languages:<br></br>
                         - HTML, CSS, Javascript, React.js, MYSQL
-                    </CVMainText>
+                    </Typography>
                 </CVBox>
             </Box>
         </Box>

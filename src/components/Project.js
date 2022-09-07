@@ -20,20 +20,20 @@ const Project = ( { projName, ImgSrc, link } ) => {
                 borderRadius: 2,
                 borderStyle: "solid",
                 borderWidth: "3px",
-                borderColor: "white",
+                borderColor: "light",
                 boxShadow: 7,
                 backgroundImage: `url(${ImgSrc})`,
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
-                bgcolor: "white",
+                bgcolor: "light",
                 height: {xs: "16rem", sm: "20rem", md: "23rem", xl: "25rem"},
                 width: {xs: "20.8rem", sm: "26rem", md: "30rem", xl: "32.5rem"},
                 margin: "2rem"
             }}>
                 <Typography variant="h5" className="nameOfProj" sx={{
                     color: "black",
-                    bgcolor: "white",
+                    bgcolor: "light",
                     width: "fit-content",
                     borderRadius: "0 0 5px 5px",
                     padding: "0.3rem",
