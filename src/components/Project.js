@@ -27,12 +27,12 @@ const Project = ( { projName, ImgSrc, link } ) => {
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
                 bgcolor: "light",
-                height: {xs: "16rem", sm: "20rem", md: "23rem", xl: "25rem"},
-                width: {xs: "20.8rem", sm: "26rem", md: "30rem", xl: "32.5rem"},
-                margin: "2rem"
+                height: {xs: "16rem", sm: "19rem", xl: "25rem"},
+                width: {xs: "20.8rem", sm: "24.7rem", xl: "32.5rem"},
+                margin: "2rem auto"
             }}>
                 <Typography variant="h5" className="nameOfProj" sx={{
-                    color: "black",
+                    color: "dark",
                     bgcolor: "light",
                     width: "fit-content",
                     borderRadius: "0 0 5px 5px",

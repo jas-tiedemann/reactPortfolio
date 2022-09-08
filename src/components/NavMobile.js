@@ -12,8 +12,8 @@ import {
   import { useState } from "react";
 
   
-  const NavBtnMob = styled(Button, {})({
-    color: "black",
+  const NavBtnMob = styled(Button)(({theme}) => ({
+    color: theme.palette.light,
     textDecoration: "none",
     borderRadius: "2",
     display: "inline-block",
@@ -21,14 +21,14 @@ import {
     backgroundColor: "transparent",
     margin: {xl: "2rem"},
     width: {md: "7rem"}
-  });
+  }));
 
   const NavMobile = () => {
     const [drawerOpen, setDrawerOpen] = useState(false);
 
     return (        
         <AppBar position="fixed" sx={{
-            backgroundColor: "black",
+            backgroundColor: "dark",
             display: "flex",
             justifyContent: "center",
             padding: "0 2rem",
@@ -42,7 +42,17 @@ import {
                     }} />
                 </IconButton>
                 
-                <Drawer open={drawerOpen} onClose={() => setDrawerOpen(false)}>
+                <Drawer open={drawerOpen} onClose={() => setDrawerOpen(false)} PaperProps={{
+                    sx:{
+                        bgcolor: "dark",
+                        "& .btnMob": {
+                            color: "light",
+                            fontSize: "1.25rem",
+                            padding: 0,
+                            margin: "0 2rem"
+                        }
+                    }
+                }}>
                     <NavBtnMob id="btnWorkMob" variant="text" onClick={() => document.getElementById("wrapperProject").scrollIntoView({block: "start"})}>
                         <Typography variant="h4">
                             Work

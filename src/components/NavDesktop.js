@@ -7,8 +7,8 @@ import {
   } from "@mui/material";
   import { styled } from '@mui/system';
 
-  const NavBtnDesk = styled(Button, {})({
-    color: "white",
+  const NavBtnDesk = styled(Button)(({theme}) => ({
+    color: theme.palette.light,
     textDecoration: "none",
     borderRadius: "2",
     display: "inline-block",
@@ -16,7 +16,7 @@ import {
     backgroundColor: "transparent",
     margin: "2rem",
     width: "fit-content"
-  }); 
+  })); 
 
   const NavDesktop = () => {
     return (

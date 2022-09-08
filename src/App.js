@@ -8,8 +8,6 @@ import Resume from './components/Resume';
 import NavDesktop from './components/NavDesktop';
 import NavMobile from './components/NavMobile';
 import Contact from './components/Contact';
-import ImageShore from "./images/shore-img.jpg";
-import ImageForest from "./images/forest-img.jpg";
 
 const App = () => {
 
@@ -44,9 +42,8 @@ const App = () => {
 
 
   return (
-    
-    <ThemeProvider theme={theme}>
-      <body>
+    <body>
+      <ThemeProvider theme={theme}>
         <header>
           <Box id="wrapperNav" sx={{
             display: "flex",
@@ -61,60 +58,18 @@ const App = () => {
         </header>
 
         <main>
-          <Box id="wrapperAbout" sx={{
-            bgcolor: "light",
-            display: "flex",
-            justifyContent: "center",
-            flexDirection: "column",
-            padding: "2rem",
-            minHeight: "50rem"
-          }}> 
-            <About />
-          </Box>
-
-          <Box id="wrapperProject" sx={{
-            backgroundImage: `url(${ImageForest})`,
-            backgroundSize: "cover",
-            backgroundPosition: {xs: "50%", md: "top"},
-            backgroundRepeat: "no-repeat",
-            height: "100%",
-            width: "100%",
-            display: "flex",
-            justifyContent: "center",
-            margin: 0,
-            padding: 0
-          }}>
-            
-            <ProjectList />
-          </Box>
-
-          <Box id="wrapperResume" sx={{
-            display: "flex",
-            justifyContent: "center",
-            padding: "2rem",
-            bgcolor: "dark"
-          }}> 
-            <Resume />
-          </Box>
-
-          <Box id="wrapperContact" sx={{
-            backgroundImage: `url(${ImageShore})`,
-            backgroundSize: "cover",
-            backgroundPosition: {xs: "50%", md: "75%"},
-            backgroundRepeat: "no-repeat",
-            height: "100%",
-            width: "100%"
-          }}> 
-            <Contact />
-          </Box>
+          <About />
+          <ProjectList />
+          <Resume />
+          <Contact />
         </main>
 
         <footer>
           <p>Terms of Service</p>
           <p>Privacy Policy</p>
         </footer>
-      </body>
-    </ThemeProvider>
+      </ThemeProvider>
+    </body>
   );
 }
 export default App;

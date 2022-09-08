@@ -7,8 +7,9 @@ import {
     Typography,
     Button
   } from "@mui/material";
-  import SendIcon from '@mui/icons-material/Send';
-  import { styled } from '@mui/system';
+import SendIcon from '@mui/icons-material/Send';
+import ImageShore from "../images/shore-img.jpg";
+import { styled } from '@mui/system';
 
   const TextBox = styled(Box, {})({
     display: "flex",
@@ -36,8 +37,13 @@ import {
   };
 
     return (
-    <Box sx={{
+    <Box id="wrapperContact" sx={{
+      backgroundImage: `url(${ImageShore})`,
+      backgroundSize: "cover",
+      backgroundPosition: {xs: "50%", md: "75%"},
+      backgroundRepeat: "no-repeat",
       minHeight: "50rem",
+      color: "dark",
       paddingBottom: "3rem",
       display: "flex",
       flexDirection: "column",
@@ -49,7 +55,8 @@ import {
         justifyContent: "center"
       }}>
         <Typography variant="h2" sx={{
-            padding: {xs: "2rem 0", md: "4rem 0"}
+            padding: {xs: "2rem 0", md: "4rem 0"},
+            color: "dark"
         }}>
             Contact
         </Typography>
@@ -58,7 +65,7 @@ import {
         bgcolor: "light",
         borderRadius: "5px",
         boxShadow: 9,
-        width: {xs: "20rem", sm: "26rem", md: "30rem"},
+        width: {xs: "100%", sm: "26rem", md: "30rem"},
         height: "fit-content",
         padding: "3rem"
       }}>
@@ -87,7 +94,7 @@ import {
             justifyContent: "center"
           }}>
             <Button type="submit" sx={{
-              bgcolor: "black",
+              bgcolor: "dark",
               color: "light",
               fontSize: "1rem",
               height: "3rem",
@@ -95,7 +102,7 @@ import {
               marginTop: "2rem",
               ":hover": {
                     bgcolor: "light",
-                    color: "black",
+                    color: "dark",
                     border: "1px solid"
                   }
             }}>
