@@ -65,7 +65,7 @@ import { styled } from '@mui/system';
         bgcolor: "light",
         borderRadius: "5px",
         boxShadow: 9,
-        width: {xs: "100%", sm: "26rem", md: "30rem"},
+        width: {xs: "85%", sm: "26rem", md: "30rem"},
         height: "fit-content",
         padding: "3rem"
       }}>

@@ -1,13 +1,15 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Box, ThemeProvider } from "@mui/material";
+import { ThemeProvider } from "@mui/material";
 import theme from "./themes/theme";
+import Intro from './components/Intro';
 import About from './components/About';
-import ProjectList from './components/ProjectList';
+import ProjectList from './components/Work';
 import Resume from './components/Resume';
 import NavDesktop from './components/NavDesktop';
 import NavMobile from './components/NavMobile';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 const App = () => {
 
@@ -44,20 +46,10 @@ const App = () => {
   return (
     <body>
       <ThemeProvider theme={theme}>
-        <header>
-          <Box id="wrapperNav" sx={{
-            display: "flex",
-            justifyContent: "center",
-            margin: 0,
-            padding: 0,
-            position: "sticky",
-            top: 0
-          }}>
-            {mobileView ? displayMobile() : displayDesktop()}
-          </Box>
-        </header>
-
+        {mobileView ? displayMobile() : displayDesktop()}
+        
         <main>
+          <Intro />
           <About />
           <ProjectList />
           <Resume />
@@ -65,8 +57,7 @@ const App = () => {
         </main>
 
         <footer>
-          <p>Terms of Service</p>
-          <p>Privacy Policy</p>
+          <Footer />
         </footer>
       </ThemeProvider>
     </body>

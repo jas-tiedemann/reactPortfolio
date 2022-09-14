@@ -2,9 +2,7 @@ import React from "react";
 import { 
     AppBar,
     Toolbar,
-    Drawer,
-    Typography,
-    Button
+    Drawer
   } from "@mui/material";
   import MenuIcon from '@mui/icons-material/Menu';
   import IconButton from '@mui/material/IconButton';
@@ -12,15 +10,15 @@ import {
   import { useState } from "react";
 
   
-  const NavBtnMob = styled(Button)(({theme}) => ({
+  const NavAnchorMob = styled("a")(({theme}) => ({
     color: theme.palette.light,
+    fontSize: "2rem",
     textDecoration: "none",
-    borderRadius: "2",
-    display: "inline-block",
-    textTransform: "none",
-    backgroundColor: "transparent",
-    margin: {xl: "2rem"},
-    width: {md: "7rem"}
+    margin: "0.5rem auto",
+    padding: "0 1rem",
+    ":hover": {
+        color: theme.palette.beige
+    }
   }));
 
   const NavMobile = () => {
@@ -32,7 +30,10 @@ import {
             display: "flex",
             justifyContent: "center",
             padding: "0 2rem",
-            height: "5rem"
+            margin: 0,
+            height: "5rem",
+            position: "sticky",
+            top: 0
         }}>
             <Toolbar>
                 <IconButton onClick={() => setDrawerOpen(true)}>
@@ -53,26 +54,21 @@ import {
                         }
                     }
                 }}>
-                    <NavBtnMob id="btnWorkMob" variant="text" onClick={() => document.getElementById("wrapperProject").scrollIntoView({block: "start"})}>
-                        <Typography variant="h4">
-                            Work
-                        </Typography>
-                    </NavBtnMob>
-                    <NavBtnMob id="btnAboutMob" variant="text" onClick={() => document.getElementById("wrapperAbout").scrollIntoView({block: "start"})}>
-                        <Typography variant="h4">
-                            About
-                        </Typography>
-                    </NavBtnMob>
-                    <NavBtnMob id="btnResumeMob" variant="text" onClick={() => document.getElementById("wrapperResume").scrollIntoView({block: "start"})}>
-                        <Typography variant="h4">
-                            Resume
-                        </Typography>
-                    </NavBtnMob>
-                    <NavBtnMob id="btnContactMob" variant="text" onClick={() => document.getElementById("wrapperContact").scrollIntoView({block: "start"})}>
-                        <Typography variant="h4">
-                            Contact
-                        </Typography>
-                    </NavBtnMob>
+                    <NavAnchorMob id="btnIntroMob" href="#intro" onClick={() => document.getElementById("wrapperIntro").scrollIntoView({block: "start"})}>
+                        Intro
+                    </NavAnchorMob>
+                    <NavAnchorMob id="btnAboutMob" href="#about" onClick={() => document.getElementById("wrapperAbout").scrollIntoView({block: "start"})}>
+                        About
+                    </NavAnchorMob>
+                    <NavAnchorMob id="btnWorkMob" href="#work" onClick={() => document.getElementById("wrapperWork").scrollIntoView({block: "start"})}>
+                        Work
+                    </NavAnchorMob>
+                    <NavAnchorMob id="btnResumeMob" href="#resume" onClick={() => document.getElementById("wrapperResume").scrollIntoView({block: "start"})}>
+                        Resume
+                    </NavAnchorMob>
+                    <NavAnchorMob id="btnContactMob" href="#contact" onClick={() => document.getElementById("wrapperContact").scrollIntoView({block: "start"})}>
+                        Contact
+                    </NavAnchorMob>
                 </Drawer>
             </Toolbar>
         </AppBar>

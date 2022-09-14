@@ -1,21 +1,18 @@
 import React from "react";
 import { 
     AppBar,
-    Typography,
-    Toolbar,
-    Button
+    Toolbar
   } from "@mui/material";
   import { styled } from '@mui/system';
 
-  const NavBtnDesk = styled(Button)(({theme}) => ({
+  const NavAnchorDesk = styled("a")(({theme}) => ({
     color: theme.palette.light,
+    fontSize: "1.5rem",
     textDecoration: "none",
-    borderRadius: "2",
-    display: "inline-block",
-    textTransform: "none",
-    backgroundColor: "transparent",
     margin: "2rem",
-    width: "fit-content"
+    ":hover": {
+        color: theme.palette.beige
+    }
   })); 
 
   const NavDesktop = () => {
@@ -27,26 +24,21 @@ import {
             height: "5rem"
         }}>
             <Toolbar>
-                <NavBtnDesk id="btnAboutDesk" variant="text" onClick={() => document.getElementById("wrapperAbout").scrollIntoView({block: "start"})}>
-                    <Typography variant="p">
-                        About
-                    </Typography>
-                </NavBtnDesk>
-                <NavBtnDesk id="btnWorkDesk" variant="text" onClick={() => document.getElementById("wrapperProject").scrollIntoView({block: "start"})}>
-                    <Typography variant="p">
-                        Work
-                    </Typography>
-                </NavBtnDesk>
-                <NavBtnDesk id="btnResumeDesk" variant="text" onClick={() => document.getElementById("wrapperResume").scrollIntoView({block: "start"})}>
-                    <Typography variant="p">
-                        Resume
-                    </Typography>
-                </NavBtnDesk>
-                <NavBtnDesk id="btnContactDesk" variant="text" onClick={() => document.getElementById("wrapperContact").scrollIntoView({block: "start"})}>
-                    <Typography variant="p">
-                        Contact
-                    </Typography>
-                </NavBtnDesk>
+                <NavAnchorDesk id="btnIntroDesk" href="#intro" onClick={() => document.getElementById("wrapperIntro").scrollIntoView({block: "start"})}>
+                    Intro
+                </NavAnchorDesk>
+                <NavAnchorDesk id="btnAboutDesk" href="#about" onClick={() => document.getElementById("wrapperAbout").scrollIntoView({block: "start"})}>
+                    About
+                </NavAnchorDesk>
+                <NavAnchorDesk id="btnWorkDesk" href="#work" onClick={() => document.getElementById("wrapperWork").scrollIntoView({block: "start"})}>
+                    Work
+                </NavAnchorDesk>
+                <NavAnchorDesk id="btnResumeDesk" href="#resume" onClick={() => document.getElementById("wrapperResume").scrollIntoView({block: "start"})}>
+                    Resume
+                </NavAnchorDesk>
+                <NavAnchorDesk id="btnContactDesk" href="#contact" onClick={() => document.getElementById("wrapperContact").scrollIntoView({block: "start"})}>
+                    Contact
+                </NavAnchorDesk>
             </Toolbar>
         </AppBar>
   )};

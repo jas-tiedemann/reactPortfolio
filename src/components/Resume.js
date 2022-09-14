@@ -4,24 +4,25 @@ import { styled } from '@mui/system';
 
 const Resume = () => {
 
-    const CVBox = styled(Box, {})({
-        color: "white",
+    const CVBox = styled(Box)(({theme}) => ({
+        color: theme.palette.light,
         fontSize: "2rem",
         display: "flex",
         flexDirection: "column"
-    });
+    }));
 
-    const CVBox2 = styled(Box, {})({
-        color: "white",
+    const CVBox2 = styled(Box)(({theme}) => ({
+        color: theme.palette.light,
         display: "flex",
         justifyContent: "center",
         width: "100%",
         margin: 0
-    });
+    }));
 
     return (
         <Box id="wrapperResume" sx={{
             margin: "auto",
+            paddingBottom: "8rem",
             bgcolor: "dark"
         }}>
             <Box sx={{ 
@@ -43,7 +44,7 @@ const Resume = () => {
                     }}>
                         <Typography variant="h2" sx={{
                             paddingBottom: "3rem",
-                            color: "white"
+                            color: "light"
                         }}>
                             Resume
                         </Typography>

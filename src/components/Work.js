@@ -15,7 +15,7 @@ const ProjectList = () => {
 
 
     return (
-        <Box id="wrapperProject" sx={{
+        <Box id="wrapperWork" sx={{
             backgroundImage: `url(${ImageForest})`,
             backgroundSize: "cover",
             backgroundPosition: {xs: "50%", md: "top"},
@@ -24,10 +24,10 @@ const ProjectList = () => {
             width: "100%",
             display: "flex",
             justifyContent: "center",
-            flexDirection: "column"
+            flexDirection: "column",
+            paddingTop: "8rem"
           }}>
             <Box sx={{
-                paddingTop: "8rem",
                 width: "100%",
                 display: "flex",
                 justifyContent: "center",

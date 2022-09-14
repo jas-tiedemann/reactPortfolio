@@ -12,18 +12,18 @@ const About = () => {
                 justifyContent: "center",
                 flexDirection: "column",
                 minHeight: "50rem",
+                padding: "8rem 0",
                 width: "90%",
                 maxWidth: "40rem",
                 margin: "auto",
                 overflow: "hidden"
             }}>
                 <Box sx={{
-                    padding: "1rem",
                     display: "flex",
                     justifyContent: "center"
                 }}>
                     <Typography variant="h2" sx={{
-                        padding: {xs: "0.75rem 0", sm: "1.5rem 0"},
+                        padding: "0.75rem 0",
                         color: "dark"
                     }}>
                         About Me
