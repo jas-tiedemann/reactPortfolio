@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Box } from "@mui/material";
+import { Typography, Box, List, ListItem } from "@mui/material";
 import { styled } from '@mui/system';
 
 const Resume = () => {
@@ -98,13 +98,15 @@ const Resume = () => {
                     </CVBox>
                     <CVBox>
                         <Typography variant="h3">Experience</Typography>
-                        <Typography variant="p">
-                            08/2019 - 05/2021<br></br>
-                            apprenticeship in application development (discontinued):<br></br>
-                            moebel.de Einrichten und Wohnen AG<br></br>
-                            - programming in HTML, CSS, PHP, Javascript<br></br>
-                            - working with MYSQL and AWS
-                        </Typography>
+                        <List>
+                            <ListItem>08/2019 - 05/2021</ListItem>
+                        </List>
+                        <Typography variant="h3">apprenticeship in application development (discontinued):</Typography>
+                        <List>
+                            <ListItem>moebel.de Einrichten und Wohnen AG</ListItem>
+                            <ListItem>- programming in HTML, CSS, PHP, Javascript</ListItem>
+                            <ListItem>- working with MYSQL and AWS</ListItem>
+                        </List>
                     </CVBox>
                     <CVBox>
                         <Typography variant="h3">Education</Typography>

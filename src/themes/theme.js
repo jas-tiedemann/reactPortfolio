@@ -33,6 +33,5 @@ const theme = createTheme({
   theme.typography.p = {
     fontSize: "1.25rem",
   };
-  
 
   export default theme;

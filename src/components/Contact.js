@@ -10,12 +10,18 @@ import {
 import SendIcon from '@mui/icons-material/Send';
 import ImageShore from "../images/shore-img.jpg";
 import { styled } from '@mui/system';
+import { InputLabel } from '@mui/material';
+
 
   const TextBox = styled(Box, {})({
     display: "flex",
     justifyContent: "center",
     flexDirection: "column",
     margin: "2rem 0"
+  });
+
+  const LabelStyled = styled(InputLabel, {})({
+    margin: "0.75rem 0"
   });
 
 
@@ -38,11 +44,12 @@ import { styled } from '@mui/system';
 
     return (
     <Box id="wrapperContact" sx={{
-      backgroundImage: `url(${ImageShore})`,
+      backgroundImage: {sm: `url(${ImageShore})`},
       backgroundSize: "cover",
       backgroundPosition: {xs: "50%", md: "75%"},
       backgroundRepeat: "no-repeat",
-      minHeight: "50rem",
+      bgcolor: "light",
+      height: "100%",
       color: "dark",
       paddingBottom: "3rem",
       display: "flex",
@@ -64,7 +71,7 @@ import { styled } from '@mui/system';
       <Box sx={{
         bgcolor: "light",
         borderRadius: "5px",
-        boxShadow: 9,
+        boxShadow: {sm: 9},
         width: {xs: "85%", sm: "26rem", md: "30rem"},
         height: "fit-content",
         padding: "3rem"
@@ -75,17 +82,17 @@ import { styled } from '@mui/system';
           ref={form}
         >
           <TextBox>
-            <Typography variant="p">Name:</Typography>
+            <LabelStyled>Name:</LabelStyled>
             <TextField required name="name">
             </TextField>
           </TextBox>
           <TextBox>
-            <Typography variant="p">E-mail:</Typography>
+            <LabelStyled>E-mail:</LabelStyled>
             <TextField required name="email">
             </TextField>
           </TextBox>
           <TextBox>
-            <Typography variant="p">Message:</Typography>
+            <LabelStyled>Message:</LabelStyled>
             <TextField multiline rows={4} required name="message">
             </TextField>
           </TextBox>

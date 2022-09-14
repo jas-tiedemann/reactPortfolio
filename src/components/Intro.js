@@ -3,6 +3,7 @@ import {
     Box,
     Typography
   } from "@mui/material";
+import sample from "../images/sample.mp4";
 
   const Intro = () => {
     return (
@@ -12,9 +13,10 @@ import {
             alignItems: "center",
             justifyContent: "center",
             textAlign: "center",
-            minHeight: "60rem",
+            minHeight: "100vh",
             bgcolor: "dark",
-            color: "beige"
+            color: "beige",
+            position: "relative",
         }}>
             <Typography variant="h1" sx={{
                 paddingBottom: "10rem"

@@ -44,23 +44,21 @@ const App = () => {
 
 
   return (
-    <body>
-      <ThemeProvider theme={theme}>
-        {mobileView ? displayMobile() : displayDesktop()}
-        
-        <main>
-          <Intro />
-          <About />
-          <ProjectList />
-          <Resume />
-          <Contact />
-        </main>
+    <ThemeProvider theme={theme}>
+      {mobileView ? displayMobile() : displayDesktop()}
+      
+      <main>
+        <Intro />
+        <About />
+        <ProjectList />
+        <Resume />
+        <Contact />
+      </main>
 
-        <footer>
-          <Footer />
-        </footer>
-      </ThemeProvider>
-    </body>
+      <footer>
+        <Footer />
+      </footer>
+    </ThemeProvider>
   );
 }
 export default App;

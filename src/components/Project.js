@@ -9,10 +9,16 @@ const Project = ( { projName, ImgSrc, link } ) => {
             rel: "noopener",
             ":hover": {
                 "& .nameOfProj": {
-                    color: "beige"
+                    color: "beige",
+                    bgcolor: "dark",
+                },
+                "& .linkBoxDescription": {
+                    visibility: "visible",
+                    bottom: "0"
                 },
                 "& .linkBox": {
-                    boxShadow: 20
+                    boxShadow: 20,
+                    borderColor: "beige",
                 }
             }
         }}>
@@ -29,7 +35,9 @@ const Project = ( { projName, ImgSrc, link } ) => {
                 bgcolor: "light",
                 height: {xs: "16rem", sm: "19rem", xl: "25rem"},
                 width: {xs: "20.8rem", sm: "24.7rem", xl: "32.5rem"},
-                margin: "2rem auto"
+                margin: "2rem auto",
+                position: "relative",
+                overflow: "hidden"
             }}>
                 <Typography variant="h5" className="nameOfProj" sx={{
                     color: "dark",
@@ -41,9 +49,31 @@ const Project = ( { projName, ImgSrc, link } ) => {
                 }}>
                     {projName}
                 </Typography>
+                <Box className="linkBoxDescription" sx={{
+                    position: "absolute",
+                    bottom: "0%",
+                    bgcolor: "dark",
+                    width: "100%",
+                    height: "66%",
+                    padding: "1rem",
+                    visibility: "hidden",
+                    bottom: "-520px",
+                    transition: "0.2s ease-in-out",
+                    display: "flex",
+                    justifyContent: "center",
+                    opacity: "0.9"
+                }}>
+                    <Typography variant="p" sx={{
+                        color: "light",
+                        textAlign: "center",
+                        margin: "0 auto"
+                    }}>
+                        lorem ipsum dolor sit amet
+                    </Typography>
+                </Box>
             </Box>
         </MuiLink>
-        )
+    )
 }
 
 export default Project;
