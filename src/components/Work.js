@@ -50,10 +50,10 @@ const ProjectList = () => {
                 margin: "auto"
             }}>
                 <ItemBox>
-                    <Project projName={"Hangman"} ImgSrc={HangmanImage} link={"http://localhost:8000/"} />
+                    <Project projName={"Hangman"} imgSrc={HangmanImage} link={"http://localhost:8000/"} projDesc="This is a Hangman website. I built it with React.js and Material-UI. This was the first website I coded with React.js" />
                 </ItemBox>
                 <ItemBox>
-                    <Project projName={"ASCII-Tree"} ImgSrc={AsciiImage} />
+                    <Project projName={"ASCII-Tree"} imgSrc={AsciiImage} projDesc="This was some of the first code I have ever written. It is a simple website which allows you to generate a tree out of ASCII characters. The languages used here are PHP, HTML and CSS" />
                 </ItemBox>
             </Box>
         </Box>

@@ -89,19 +89,19 @@ const Resume = () => {
                     }}>
                     <CVBox>
                         <Typography variant="h3">My Profile</Typography>
-                        <Typography variant="p">
-                            - web developer with more than three years of experience
-                        </Typography>
-                        <Typography variant="p">
-                            - work experience through apprenticeship in e-commerce company
-                        </Typography>
+                        <List>
+                            <ListItem>- web developer with more than three years of experience</ListItem>
+                            <ListItem>- work experience through apprenticeship in e-commerce company</ListItem>
+                        </List>
                     </CVBox>
                     <CVBox>
                         <Typography variant="h3">Experience</Typography>
                         <List>
                             <ListItem>08/2019 - 05/2021</ListItem>
                         </List>
-                        <Typography variant="h3">apprenticeship in application development (discontinued):</Typography>
+                        <List>
+                            <ListItem>apprenticeship in application development (discontinued):</ListItem>
+                        </List>
                         <List>
                             <ListItem>moebel.de Einrichten und Wohnen AG</ListItem>
                             <ListItem>- programming in HTML, CSS, PHP, Javascript</ListItem>
@@ -110,22 +110,32 @@ const Resume = () => {
                     </CVBox>
                     <CVBox>
                         <Typography variant="h3">Education</Typography>
-                        <Typography variant="p">
-                            2010 - 2015<br></br>
-                            Gemeinschaftshauptschule Lotte:<br></br>
-                            General Certificate of Secondary Education
-                        </Typography>
+                        <List>
+                            <ListItem>2010 - 2015</ListItem>
+                        </List>
+                        
+                        <List>
+                            <ListItem>Gemeinschaftshauptschule Lotte:</ListItem>
+                        </List>
+                        <List>
+                            <ListItem>General Certificate of Secondary Education</ListItem>
+                        </List>
                     </CVBox>
                     <CVBox>
                         <Typography variant="h3">Skills</Typography>
-                        <Typography variant="p">
-                            Languages:<br></br>
-                            - German (native)<br></br>
-                            - English (fluent)<br></br>
-                            <br></br>
-                            Programming languages:<br></br>
-                            - HTML, CSS, Javascript, React.js, MYSQL
-                        </Typography>
+                        <List>
+                            <ListItem>Languages:</ListItem>
+                            <List>
+                                <ListItem>- German (native)</ListItem>
+                                <ListItem>- English (fluent)</ListItem>
+                            </List>
+                            <List>
+                                <ListItem>Programming languages:</ListItem>
+                                <List>
+                                    <ListItem>- HTML, CSS, Javascript, React.js, MYSQL</ListItem>
+                                </List>
+                            </List>
+                        </List>
                     </CVBox>
                 </Box>
             </Box>

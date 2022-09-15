@@ -62,7 +62,8 @@ import { InputLabel } from '@mui/material';
         justifyContent: "center"
       }}>
         <Typography variant="h2" sx={{
-            padding: {xs: "2rem 0", md: "4rem 0"},
+            paddingTop: {xs: "2rem", sm: "8rem"},
+            paddingBottom: {xs: "0", sm: "4rem"},
             color: "dark"
         }}>
             Contact

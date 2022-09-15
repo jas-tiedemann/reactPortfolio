@@ -29,7 +29,7 @@ import {
             padding: "0 2rem",
             margin: 0,
             height: "5rem",
-            position: "sticky",
+            position: "fixed",
             top: 0
         }}>
             <Toolbar>

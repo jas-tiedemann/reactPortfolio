@@ -39,7 +39,7 @@ const About = () => {
                     <Typography variant="h3">Personal:</Typography>
                     <Typography variant="p">My name is Jasper Tiedemann and I'm a web developer based in Germany with over three years of experience.</Typography>
                     <Typography variant="h3">Skills:</Typography>
-                    <Typography variant="p">Most recently I taught myself React.js and Material-UI with which I created a Hangman web application and this website. Prior to that I mostly did PHP backend development. Additionally I know how to use HTML, CSS, MySQL and Git for version control.</Typography>
+                    <Typography variant="p">Most recently I taught myself React.js and Material-UI with which I created a Hangman website and this portfolio. Prior to that I mostly did PHP backend development. Additionally I know how to use HTML, CSS, MySQL and Git for version control.</Typography>
                     <Typography variant="h3">Hobbies:</Typography>
                     <Typography variant="p">My favorite things to do in my free time are running, working out, cooking and playing video games.</Typography>
                 </Box>

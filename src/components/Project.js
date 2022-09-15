@@ -2,7 +2,7 @@ import React from "react";
 import { Typography, Box, Link as MuiLink } from "@mui/material";
 
 
-const Project = ( { projName, ImgSrc, link } ) => {
+const Project = ( { projName, imgSrc, link, projDesc } ) => {
     return (
         <MuiLink href={link} target="_blank" sx={{
             textDecoration: "none",
@@ -28,7 +28,7 @@ const Project = ( { projName, ImgSrc, link } ) => {
                 borderWidth: "3px",
                 borderColor: "light",
                 boxShadow: 7,
-                backgroundImage: `url(${ImgSrc})`,
+                backgroundImage: `url(${imgSrc})`,
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
@@ -55,7 +55,7 @@ const Project = ( { projName, ImgSrc, link } ) => {
                     bgcolor: "dark",
                     width: "100%",
                     height: "66%",
-                    padding: "1rem",
+                    margin: "auto",
                     visibility: "hidden",
                     bottom: "-520px",
                     transition: "0.2s ease-in-out",
@@ -65,10 +65,10 @@ const Project = ( { projName, ImgSrc, link } ) => {
                 }}>
                     <Typography variant="p" sx={{
                         color: "light",
-                        textAlign: "center",
-                        margin: "0 auto"
+                        width: "80%",
+                        padding: "0.5rem"
                     }}>
-                        lorem ipsum dolor sit amet
+                        {projDesc}
                     </Typography>
                 </Box>
             </Box>

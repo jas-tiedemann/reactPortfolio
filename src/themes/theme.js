@@ -6,6 +6,15 @@ const theme = createTheme({
       light: "#F5F5F5",
       beige: "#FACF69",
     },
+    components: {
+      MuiListItem: {
+        styleOverrides: {
+          root: {
+            fontSize: "1.25rem",
+            padding: 0,
+          }
+      }}
+    }
   });
 
   theme.typography.h1 = {
@@ -30,7 +39,18 @@ const theme = createTheme({
     },
   };
 
+  theme.typography.h4 = {
+    fontSize: "1.4rem",
+    [theme.breakpoints.up("md")]: {
+      fontSize: "1.5rem",
+    },
+  };
+
   theme.typography.p = {
+    fontSize: "1.25rem",
+  };
+
+  theme.typography.listItem = {
     fontSize: "1.25rem",
   };
 
