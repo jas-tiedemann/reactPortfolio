@@ -1,7 +1,9 @@
 import React from "react";
+import { useState } from "react";
 import { 
     Box
   } from "@mui/material";
+  import Privacy from "./Privacy";
   import { styled } from '@mui/system';
 
   const FooterAnchor = styled("a")(({theme}) => ({
@@ -11,9 +13,16 @@ import {
     ":hover": {
         color: theme.palette.beige
     }
-  })); 
+  }));
 
   const Footer = () => {
+
+    const [showPrivacy, setShowPrivacy] = useState(false);
+
+    const handleClose = () => {
+      setShowPrivacy(false);
+    }
+
     return (
         <Box sx={{
             bgcolor: "dark",
@@ -23,8 +32,8 @@ import {
             alignContent: "center",
             padding: "1rem 0"
         }}>
-          <FooterAnchor href="#terms">Terms of Use</FooterAnchor>
-          <FooterAnchor href="#privacy">Privacy Policy</FooterAnchor>
+          <FooterAnchor href="#privacy" onClick={() => setShowPrivacy(true)}>Privacy Policy</FooterAnchor>
+          <Privacy open={showPrivacy} handleClose={handleClose} />
         </Box>
     )};
 

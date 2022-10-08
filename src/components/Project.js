@@ -66,6 +66,7 @@ const Project = ( { projName, imgSrc, link, projDesc } ) => {
                     <Typography variant="p" sx={{
                         color: "light",
                         width: "80%",
+                        fontSize: {xs: "1rem", md: "1.25rem"},
                         padding: "0.5rem"
                     }}>
                         {projDesc}

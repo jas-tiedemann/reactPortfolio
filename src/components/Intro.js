@@ -3,7 +3,6 @@ import {
     Box,
     Typography
   } from "@mui/material";
-import sample from "../images/sample.mp4";
 
   const Intro = () => {
     return (
@@ -17,6 +16,7 @@ import sample from "../images/sample.mp4";
             bgcolor: "dark",
             color: "beige",
             position: "relative",
+            padding: "2rem"
         }}>
             <Typography variant="h1" sx={{
                 paddingBottom: "10rem"

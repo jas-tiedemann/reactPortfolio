@@ -25,7 +25,7 @@ const ProjectList = () => {
             display: "flex",
             justifyContent: "center",
             flexDirection: "column",
-            paddingTop: "8rem"
+            padding: "8rem 0"
           }}>
             <Box sx={{
                 width: "100%",
