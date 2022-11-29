@@ -126,11 +126,11 @@ import {
                         Consent
                     </Typography>
                     <Typography variant="p">
-                        By using our website, you hereby consent to our Privacy Policy and agree to its Privacy.
+                        By using our website, you hereby consent to our Privacy Policy and agree to its Privacy
                     </Typography>
 
                     <Typography variant="p">
-                        Generated using GDPR Privacy Notice
+                        . Generated using GDPR Privacy Notice
                     </Typography>
                 </Box>
             </Box>

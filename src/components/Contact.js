@@ -32,7 +32,7 @@ import { InputLabel } from '@mui/material';
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm("SERVICE_ID", "TEMPLATE_ID", form.current, "PUBLIC_KEY")
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
       .then((result) => {
         console.log(result.text);
         alert("E-Mail sent successfully!");
