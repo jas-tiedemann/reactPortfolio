@@ -33,7 +33,9 @@ const theme = createTheme({
 
   theme.typography.h3 = {
     fontSize: "1.5rem",
-    margin: "2rem 0",
+    margin: "0",
+    marginTop: "3rem",
+    marginBottom: "1rem",
     [theme.breakpoints.up("md")]: {
       fontSize: "2rem",
     },

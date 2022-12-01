@@ -1,7 +1,8 @@
 html {
   scroll-behavior: smooth;
   height: 100%;
-  overflow: auto;
+  overflow: scroll;
+  scrollbar-width: none;
 }
 
 body {

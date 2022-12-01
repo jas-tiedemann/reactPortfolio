@@ -11,6 +11,11 @@ import SendIcon from '@mui/icons-material/Send';
 import ImageShore from "../images/shore-img.jpg";
 import { styled } from '@mui/system';
 import { InputLabel } from '@mui/material';
+import { Link } from "react-router-dom";
+
+const SERVICE_ID = "HELLO";
+const TEMPLATE_ID = "HELLOHELLO";
+const PUBLIC_KEY = "HELLOHELLOHELLO";
 
 
   const TextBox = styled(Box, {})({
@@ -25,7 +30,17 @@ import { InputLabel } from '@mui/material';
   });
 
 
-  const Contact = () => {
+const Contact = () => {
+
+  useEffect(() => {
+    const otions = {
+      method: "GET",
+      url: LINK,
+      headers: {
+        HEADERS
+      }
+    }
+  });
 
   const form = useRef();
 
@@ -75,7 +90,7 @@ import { InputLabel } from '@mui/material';
         boxShadow: {sm: 9},
         width: {xs: "85%", sm: "26rem", md: "30rem"},
         height: "fit-content",
-        padding: "3rem"
+        padding: {xs: 0, sm: "3rem"}
       }}>
         <form
           id="messageForm"
