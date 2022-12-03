@@ -33,7 +33,7 @@ const PUBLIC_KEY = "HELLOHELLOHELLO";
 const Contact = () => {
 
   useEffect(() => {
-    const otions = {
+    const options = {
       method: "GET",
       url: LINK,
       headers: {
