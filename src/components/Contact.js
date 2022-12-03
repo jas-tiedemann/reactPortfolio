@@ -32,15 +32,7 @@ const PUBLIC_KEY = "HELLOHELLOHELLO";
 
 const Contact = () => {
 
-  useEffect(() => {
-    const options = {
-      method: "GET",
-      url: LINK,
-      headers: {
-        HEADERS
-      }
-    }
-  });
+
 
   const form = useRef();
 
