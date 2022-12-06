@@ -104,7 +104,7 @@ const Resume = () => {
                         </List>
                         <List>
                             <ListItem>moebel.de Einrichten und Wohnen AG</ListItem>
-                            <ListItem>- programming in HTML, CSS, PHP, Javascript</ListItem>
+                            <ListItem>- programming in HTML, CSS, Javascript, PHP</ListItem>
                             <ListItem>- working with MYSQL and AWS</ListItem>
                         </List>
                     </CVBox>

@@ -19,7 +19,7 @@ import {
             padding: "2rem"
         }}>
             <Typography variant="h1" sx={{
-                paddingBottom: "10rem"
+                padding: "10rem 0"
             }}>
                 Welcome to Jasper's portfolio page!
             </Typography>
@@ -27,7 +27,10 @@ import {
                 With this website I want to introduce myself, show some of my skills and tell you about me.
             </Typography>
             <Typography variant="p">
-                If you want to get in touch, find the contact section on the bottom.
+                If you want to get in touch, find the contact section on the bottom or give me a call!
+            </Typography>
+            <Typography variant="h3">
+                +49 157 5865662
             </Typography>
         </Box>
     )};
