@@ -30,7 +30,7 @@ import {
                 If you want to get in touch, find the contact section on the bottom or give me a call!
             </Typography>
             <Typography variant="h3">
-                +49 157 5865662
+                +49 1575 5865662
             </Typography>
         </Box>
     )};
