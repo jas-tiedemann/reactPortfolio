@@ -47,7 +47,7 @@ import {
                             fontSize: "1.25rem",
                             padding: "1rem",
                             margin: "0 2rem",
-                            textAlign: "center"
+                            textAlign: "left"
                         }
                     }
                 }}>
