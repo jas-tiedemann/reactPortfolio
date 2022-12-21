@@ -49,7 +49,7 @@ const Contact = () => {
       });
   };
 
-    return (
+  return (
     <Box id="wrapperContact" sx={{
       backgroundImage: {sm: `url(${ImageShore})`},
       backgroundSize: "cover",
@@ -127,7 +127,6 @@ const Contact = () => {
         </form>
       </Box>
     </Box>
-        
   )};
 
   export default Contact;
