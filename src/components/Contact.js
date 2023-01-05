@@ -11,11 +11,10 @@ import SendIcon from '@mui/icons-material/Send';
 import ImageShore from "../images/shore-img.jpg";
 import { styled } from '@mui/system';
 import { InputLabel } from '@mui/material';
-import { Link } from "react-router-dom";
 
-const SERVICE_ID = "HELLO";
-const TEMPLATE_ID = "HELLOHELLO";
-const PUBLIC_KEY = "HELLOHELLOHELLO";
+const SERVICE_ID = process.env.SERVICE_ID;
+const TEMPLATE_ID = process.env.TEMPLATE_ID;
+const PUBLIC_KEY = process.env.PUBLIC_KEY;
 
 
   const TextBox = styled(Box, {})({
@@ -31,9 +30,6 @@ const PUBLIC_KEY = "HELLOHELLOHELLO";
 
 
 const Contact = () => {
-
-
-
   const form = useRef();
 
   const handleSubmit = (e) => {
