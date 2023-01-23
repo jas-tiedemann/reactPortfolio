@@ -24,7 +24,7 @@ import {
                 Welcome to Jasper's portfolio page!
             </Typography>
             <Typography variant="p">
-                With this website I want to introduce myself, show some of my skills and tell you about me.
+                Hello my name is Jasper Tiedemann. With this website I want to introduce myself, show some of my skills and tell you about me.
             </Typography>
             <Typography variant="p">
                 If you want to get in touch, find the contact section on the bottom or give me a call!
