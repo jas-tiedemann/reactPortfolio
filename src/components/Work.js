@@ -50,7 +50,7 @@ const ProjectList = () => {
                 margin: "auto"
             }}>
                 <ItemBox>
-                    <Project projName={"Hangman"} imgSrc={HangmanImage} link={"https://jas-tiedemann.github.io/reactHangman/"} projDesc="This is a Hangman website. I built it with React.js and Material-UI. This was the first website I coded with React.js" />
+                    <Project projName={"Hangman"} imgSrc={HangmanImage} link={"https://jas-tiedemann.github.io/reactHangman/"} projDesc="My first project I built using React.js and Material-UI. Other languages used are HTML and CSS" />
                 </ItemBox>
             </Box>
         </Box>
