@@ -28,7 +28,7 @@ import {
             justifyContent: "center",
             padding: "0 2rem",
             margin: 0,
-            height: "5rem",
+            height: "4rem",
             position: "fixed",
             top: 0
         }}>
