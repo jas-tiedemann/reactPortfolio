@@ -37,11 +37,11 @@ const About = () => {
                     color: "dark"
                 }}>
                     <Typography variant="h3">Personal:</Typography>
-                    <Typography variant="p">My name is Jasper Tiedemann and I'm a web developer based in Germany with over three years of experience.</Typography>
+                    <Typography variant="p">My name is Jasper Tiedemann and I'm a web developer based in Germany with over four years of experience in building websites.</Typography>
                     <Typography variant="h3">Skills:</Typography>
-                    <Typography variant="p">Most recently I taught myself Javascript, React.js and Material-UI with which I created a Hangman website and this portfolio. Prior to that I mostly did PHP backend development. Additionally I know how to use HTML, CSS, MySQL and Git for version control.</Typography>
+                    <Typography variant="p">Most recently I created a website for the tattoo and piercing studio Made in Heaven in Osnabrück, Germany. I know how to use Javascript, React.js, Material-UI, HTML, CSS and SCSS</Typography>
                     <Typography variant="h3">Hobbies:</Typography>
-                    <Typography variant="p">My favorite things to do in my free time are coding, running, working out, cooking and playing video games.</Typography>
+                    <Typography variant="p">My favorite things to do in my free time are coding, bouldering, running and playing video games</Typography>
                 </Box>
             </Box>
         </Box>
