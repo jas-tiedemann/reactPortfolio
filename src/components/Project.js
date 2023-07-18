@@ -35,7 +35,7 @@ const Project = ( { projName, imgSrc, link, projDesc } ) => {
                 bgcolor: "light",
                 height: {xs: "16rem", sm: "19rem", xl: "25rem"},
                 width: {xs: "20.8rem", sm: "24.7rem", xl: "32.5rem"},
-                margin: "2rem auto",
+                margin: "2rem 4rem",
                 position: "relative",
                 overflow: "hidden"
             }}>
