@@ -53,7 +53,7 @@ const ProjectList = () => {
                     flexDirection: {xs: "column", lg: "row"}
                 }}>
                     <Project projName={"Made in Heaven"} imgSrc={MIHImage} link={"https://jas-tiedemann.github.io/made-in-heaven/"} projDesc="A single page, static website for the tattoo and piercing studio Made in Heaven. The technologies used are React.js, HTML and SCSS. This represents my first real world project" />
-                    <Project projName={"Hangman"} imgSrc={HangmanImage} link={"https://jas-tiedemann.github.io/reactHangman/"} projDesc="A My first project I built using React.js and Material-UI. Other languages used are HTML and CSS" />
+                    <Project projName={"Hangman"} imgSrc={HangmanImage} link={"https://jas-tiedemann.github.io/reactHangman/"} projDesc="My first project I built using React.js and Material-UI. Other languages used are HTML and CSS" />
                 </ItemBox>
             </Box>
         </Box>
